@@ -1,0 +1,7 @@
+package com.example.ndk;
+
+import java.io.FileOutputStream;
+
+public class FileSecurity {
+FileOutputStream fosFileOutputStream=new FileOutputStream("omg.txt");
+}
