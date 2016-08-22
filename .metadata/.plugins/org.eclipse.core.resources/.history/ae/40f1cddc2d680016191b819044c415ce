@@ -25,13 +25,13 @@ public class MainActivity extends Activity {
 
 		String runinwhereString = isrunninginEmualtor();// 是否運行在模擬器中
 		Toast.makeText(getApplicationContext(), runinwhereString, 0).show();
-		// isDebuggerable();// 是否可以被調試
+		isDebuggerable();// 是否可以被調試
 		// 是否被重打包了
 		while (getSingnatrue(PackageName) != getSingnatrue(PackageName)) {
 			Toast.makeText(getApplicationContext(), "signatrue has changed", 0)
 					.show();
 		}
-		SeeStorage();
+
 	}
 
 	// 查询os
@@ -113,8 +113,8 @@ public class MainActivity extends Activity {
 
 	// 检测dex文件的hash值（用md5或者是crc都可以）
 
-	// 看手机external Storage和internel Storage的位置
-	public void SeeStorage() {
+	// 看手机内部存储的位置
+	public void Seestorage() {
 		Log.i("codecraeer", "getFilesDir = " + getFilesDir());
 		Log.i("codecraeer",
 				"getExternalFilesDir = "

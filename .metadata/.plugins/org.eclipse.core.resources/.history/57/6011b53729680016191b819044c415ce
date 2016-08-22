@@ -10,7 +10,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -25,13 +24,12 @@ public class MainActivity extends Activity {
 
 		String runinwhereString = isrunninginEmualtor();// 是否運行在模擬器中
 		Toast.makeText(getApplicationContext(), runinwhereString, 0).show();
-		// isDebuggerable();// 是否可以被調試
-		// 是否被重打包了
+		isDebuggerable();// 是否可以被調試
 		while (getSingnatrue(PackageName) != getSingnatrue(PackageName)) {
 			Toast.makeText(getApplicationContext(), "signatrue has changed", 0)
 					.show();
 		}
-		SeeStorage();
+
 	}
 
 	// 查询os
@@ -73,7 +71,7 @@ public class MainActivity extends Activity {
 		return result;
 	}
 
-	// 检测是否为可调试状态
+	// 檢測是否是被該為可調試狀態
 	public void isDebuggerable() {
 		if ((getApplicationInfo().flags &= getApplicationInfo().FLAG_DEBUGGABLE) != 0) {
 			Toast.makeText(getApplicationContext(), getApplicationInfo().flags,
@@ -85,7 +83,7 @@ public class MainActivity extends Activity {
 
 	}
 
-	// 检测是否正在被调试
+	// 檢測是否被調試了
 	public void isbeingdebuger() {
 		Boolean bl = android.os.Debug.isDebuggerConnected();
 		while (bl) {
@@ -110,24 +108,6 @@ public class MainActivity extends Activity {
 
 		return signatrue;
 	}
-
 	// 检测dex文件的hash值（用md5或者是crc都可以）
-
-	// 看手机external Storage和internel Storage的位置
-	public void SeeStorage() {
-		Log.i("codecraeer", "getFilesDir = " + getFilesDir());
-		Log.i("codecraeer",
-				"getExternalFilesDir = "
-						+ getExternalFilesDir("exter_test").getAbsolutePath());
-		Log.i("codecraeer", "getDownloadCacheDirectory = "
-				+ Environment.getDownloadCacheDirectory().getAbsolutePath());
-		Log.i("codecraeer", "getDataDirectory = "
-				+ Environment.getDataDirectory().getAbsolutePath());
-		Log.i("codecraeer", "getExternalStorageDirectory = "
-				+ Environment.getExternalStorageDirectory().getAbsolutePath());
-		Log.i("codecraeer", "getExternalStoragePublicDirectory = "
-				+ Environment.getExternalStoragePublicDirectory("pub_test"));
-
-	}
 
 }

@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 
 		String runinwhereString = isrunninginEmualtor();// 是否運行在模擬器中
 		Toast.makeText(getApplicationContext(), runinwhereString, 0).show();
-		// isDebuggerable();// 是否可以被調試
+		//isDebuggerable();// 是否可以被調試
 		// 是否被重打包了
 		while (getSingnatrue(PackageName) != getSingnatrue(PackageName)) {
 			Toast.makeText(getApplicationContext(), "signatrue has changed", 0)
