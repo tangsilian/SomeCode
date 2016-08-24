@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
 
 		Toast.makeText(getApplicationContext(), readinternelStorage(), 0)
 				.show();
+
 	}
 
 	// ≤È—Øos

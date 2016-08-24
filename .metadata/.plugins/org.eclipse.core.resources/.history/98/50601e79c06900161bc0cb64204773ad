@@ -1,0 +1,8 @@
+package com.example.ndk;
+
+import java.io.File;
+
+
+public class FileSecurity {
+File read=new File("uzi");
+}
