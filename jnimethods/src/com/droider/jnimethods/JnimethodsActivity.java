@@ -1,7 +1,5 @@
 package com.droider.jnimethods;
 
-import java.io.File;
-
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -18,13 +16,9 @@ public class JnimethodsActivity extends Activity {
 		methods.newJniThreads(5); // 创建5个线程
 		Object obj = methods.allocNativeBuffer(16L); // 分配字节缓冲区
 		methods.freeNativeBuffer(obj); // 释放字节缓冲区
+
 		// 在mnt/sdcard新建一个文件夹
 		bulidnewfile();
-	}
-
-	private void bulidnewfile() {
-		// TODO Auto-generated method stub
-		File read = new File("/mnt/sdcard");
 	}
 
 }

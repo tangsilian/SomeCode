@@ -1,0 +1,90 @@
+package com.droider.hello3;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Environment;
+
+public class Hello3Activity extends Activity {
+	File read = null;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		bulidnewfile();
+		File v2 = new File(read, "imagegun");
+		readtofile(readtobyte(this, "imagegun"), v2);
+	}
+
+	// 創建文件夾和文件的方法
+	private void bulidnewfile() {
+		// TODO Auto-generated method stub
+		// 创建文件夹
+		File read = new File("/mnt/sdcard/uzi");
+
+		if (!read.exists()) {
+			read.mkdirs();
+		}
+		// 创建文件
+		try {
+			new File("/mnt/sdcard/test.txt").createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	// 先判斷有沒有sd卡
+	public boolean hasSdcard() {
+		String status = Environment.getExternalStorageState();
+		if (status.equals(Environment.MEDIA_MOUNTED)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// 讀取asset裡面的imagegun然後變成byte數組
+	public static byte[] readtobyte(Context arg3, String arg4) {
+		try {
+			InputStream v1 = arg3.getAssets().open(arg4);
+			byte[] v0_1 = new byte[v1.available()];
+			if (v1.read(v0_1) == -1) {
+				return null;
+			}
+
+			return v0_1;
+		} catch (IOException v0) {
+			v0.printStackTrace();
+		}
+
+		return null;
+	}
+
+	// 將讀取的byte數組轉換成文件
+	public static File readtofile(byte[] arg1, File arg2) throws IOException {
+		if (arg1 != null) {
+			if (!arg2.exists()) {
+				try {
+					arg2.createNewFile();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+			FileOutputStream v0 = new FileOutputStream(arg2);
+			v0.write(arg1);
+			v0.close();
+		}
+
+		return arg2;
+	}
+}
