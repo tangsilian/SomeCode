@@ -1,0 +1,74 @@
+package com.droider.hello3;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.security.SecureRandom;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+
+import android.app.Activity;
+import android.content.res.AssetManager;
+import android.os.Bundle;
+
+public class SoDesDecode extends Activity {
+	static SoDesDecode context;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+	
+	}
+
+	/**
+	 * 先打开asset文件
+	 */
+	static AssetManager m_assetManager = getResources().getAssets();
+
+	public static byte[] makefile() {
+		String line = "";
+		String Result = "";
+		try {
+			InputStream in = m_assetManager.open("wuhahah.data.data");
+			InputStreamReader inputReader = new InputStreamReader(in);
+			BufferedReader bufReader = new BufferedReader(inputReader);
+			while ((line = bufReader.readLine()) != null) {
+				Result += line;
+			}
+			return Result.getBytes();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Result.getBytes();
+	}
+
+	/**
+	 * 解密
+	 * 
+	 * @param content
+	 *            待解密内容
+	 * @param key
+	 *            解密的密钥
+	 * @return
+	 */
+	public static String decrypt(byte[] content, String key) {
+		try {
+			SecureRandom random = new SecureRandom();
+			DESKeySpec desKey = new DESKeySpec(key.getBytes());
+			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+			SecretKey securekey = keyFactory.generateSecret(desKey);
+			Cipher cipher = Cipher.getInstance("DES");
+			cipher.init(Cipher.DECRYPT_MODE, securekey, random);
+			byte[] result = cipher.doFinal(content);
+			return new String(result);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

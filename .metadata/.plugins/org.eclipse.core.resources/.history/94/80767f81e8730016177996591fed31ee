@@ -1,0 +1,84 @@
+package com.droider.hello3;
+
+import java.io.InputStream;
+import java.security.SecureRandom;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+
+import org.apache.http.util.EncodingUtils;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+public class SoDesDecode extends Activity {
+	static SoDesDecode context;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		String res = new String(makefile());
+		res = String.copyValueOf(res.toCharArray(), 0, makefile().length);
+		Log.i("UZI", res);
+		Log.i("UZI", "213213");
+		// Toast.makeText(getApplicationContext(), res, 0).show();
+
+	}
+
+	/**
+	 * 先打开asset文件,返回一个byte数组
+	 */
+	public static byte[] makefile() {
+		String line = "";
+		String Result = "";
+		try {
+			InputStream in = context.getResources().getAssets().open("omg.txt");
+			// 创建流文件读入与写出类
+			/*
+			 * FileInputStream inStream = new FileInputStream();
+			 * FileOutputStream outStream = new FileOutputStream(outFile);
+			 */
+			int lenght = in.available();
+			Toast.makeText(context, lenght, 0).show();
+			// 创建byte数组
+			byte[] buffer = new byte[lenght];
+			// 将文件中的数据读到byte数组中
+			in.read(buffer);
+			Result = EncodingUtils.getString(buffer, "utf-8");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return Result.getBytes();
+	}
+
+	/**
+	 * 解密
+	 * 
+	 * @param content
+	 *            待解密内容
+	 * @param key
+	 *            解密的密钥
+	 * @return
+	 */
+	public static String decrypt(byte[] content, String key) {
+		try {
+			SecureRandom random = new SecureRandom();
+			DESKeySpec desKey = new DESKeySpec(key.getBytes());
+			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+			SecretKey securekey = keyFactory.generateSecret(desKey);
+			Cipher cipher = Cipher.getInstance("DES");
+			cipher.init(Cipher.DECRYPT_MODE, securekey, random);
+			byte[] result = cipher.doFinal(content);
+			return new String(result);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

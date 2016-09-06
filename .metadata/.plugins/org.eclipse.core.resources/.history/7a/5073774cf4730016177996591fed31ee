@@ -1,0 +1,72 @@
+package com.droider.hello3;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.security.SecureRandom;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+public class SoDesDecode extends Activity {
+	static SoDesDecode context;
+	String line = "";
+	String Result = "";
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+
+		try {
+			// 拿到输入流
+			InputStream in = getAssets().open("omt.txt");
+			InputStreamReader isInputStreamReader = new InputStreamReader(in);
+			BufferedReader br = new BufferedReader(isInputStreamReader);
+			StringBuilder sBuilder = null;
+			String str = null;
+			while ((str = br.readLine()) != null) {
+				Log.i("UZI", str);
+			}
+			Toast.makeText(getApplicationContext(), "2132213", 0).show();
+			Log.i("UZI", "ewer");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 解密
+	 * 
+	 * @param content
+	 *            待解密内容
+	 * @param key
+	 *            解密的密钥
+	 * @return
+	 */
+	public static String decrypt(byte[] content, String key) {
+		try {
+			SecureRandom random = new SecureRandom();
+			DESKeySpec desKey = new DESKeySpec(key.getBytes());
+			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+			SecretKey securekey = keyFactory.generateSecret(desKey);
+			Cipher cipher = Cipher.getInstance("DES");
+			cipher.init(Cipher.DECRYPT_MODE, securekey, random);
+			byte[] result = cipher.doFinal(content);
+			return new String(result);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

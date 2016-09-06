@@ -1,0 +1,97 @@
+package com.droider.hello3;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.SecureRandom;
+
+import javax.crypto.Cipher;
+import javax.crypto.SecretKey;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class SoDesDecode extends Activity {
+	static SoDesDecode context;
+	String line = "";
+	String Result = "";
+	String keyString = "dangdang";
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		try {
+			/*
+			 * // 测试拿输入流读取文件 InputStream in = getAssets().open("omt.txt");
+			 * InputStreamReader isInputStreamReader = new
+			 * InputStreamReader(in); BufferedReader br = new
+			 * BufferedReader(isInputStreamReader); StringBuilder sBuilder =
+			 * null; String str = null;
+			 * 
+			 * while ((str = br.readLine()) != null) { Log.i("UZI", str); }
+			 * 
+			 * Toast.makeText(getApplicationContext(), str, 0).show();
+			 */
+			InputStream in = getAssets().open("wuhahah.data.data");
+			// 創建一個文件流
+
+			FileOutputStream fileOutputStream = new FileOutputStream(
+					bulidfile());
+
+			int lenght = in.available();
+			// 创建byte数组
+			byte[] buffer = new byte[lenght];
+			// 将文件中的数据读到byte数组中
+			in.read(buffer);
+			// 測試讀取
+			/*
+			 * String string = new String(buffer);
+			 * Toast.makeText(getApplicationContext(), string, 0).show();
+			 */
+			// 解密wuhahah.data.data文件 返回一個byte數組
+			decrypt(buffer, keyString);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 解密
+	 * 
+	 * @param content
+	 *            待解密内容
+	 * @param key
+	 *            解密的密钥
+	 * @return
+	 */
+	public static byte[] decrypt(byte[] content, String key) {
+		byte[] result = null;
+		try {
+			SecureRandom random = new SecureRandom();
+			DESKeySpec desKey = new DESKeySpec(key.getBytes());
+			SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DES");
+			SecretKey securekey = keyFactory.generateSecret(desKey);
+			Cipher cipher = Cipher.getInstance("DES");
+			cipher.init(Cipher.DECRYPT_MODE, securekey, random);
+			result = cipher.doFinal(content);
+			return result;
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public File bulidfile() throws IOException {
+		File file = new File("/data/data/leigangwu.jar");
+		if (!file.exists()) {
+			file.createNewFile();
+		}
+		return file;
+	}
+}
