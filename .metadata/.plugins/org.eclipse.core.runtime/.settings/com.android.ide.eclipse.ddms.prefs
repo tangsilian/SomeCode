@@ -17,3 +17,4 @@ logcat.view.colsize.TID=58
 logcat.view.colsize.Tag=119
 logcat.view.colsize.Text=613
 logcat.view.colsize.Time=150
+logcat.view.filters.list=name\: '1223', tag\: 'UZI', text\: '', pid\: '', app\: '', level\: 'verbose', 

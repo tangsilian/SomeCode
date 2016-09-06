@@ -1,0 +1,24 @@
+package com.example.jiakehoumasongsong;
+
+import android.app.Application;
+import android.content.res.AssetManager;
+
+public class Myapplication  extends Application{
+static{
+	System.loadLibrary("wuhahah");
+}
+
+public Myapplication() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+@Override
+	public void onCreate() {
+		// TODO Auto-generated method stub
+	Myapplication.load(this,this.getAssets());
+	super.onCreate();
+	
+}
+
+
+}
