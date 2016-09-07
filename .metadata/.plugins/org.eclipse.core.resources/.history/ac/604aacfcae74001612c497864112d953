@@ -1,0 +1,22 @@
+package com.example.jiakehoumasongsong;
+
+import android.app.Application;
+
+public class Myapplication extends Application {
+	static {
+		System.loadLibrary("wuhahah");
+	}
+
+	public Myapplication() {
+		super();
+	}
+
+	public void onCreate() {
+		 Myapplication.load(Myapplication.this, this.getAssets(), null);
+		super.onCreate();
+	}
+
+	private static native void load(Myapplication myapplication, Object arg1,
+			Object arg2);
+
+}

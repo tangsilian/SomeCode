@@ -1,7 +1,9 @@
 package com.example.masongsong;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.SecureRandom;
 
 import javax.crypto.Cipher;
@@ -33,14 +35,14 @@ public class MainActivity extends Activity {
 			// Toast.makeText(getApplicationContext(), str, 0).show();
 			//
 			// 拿到输入流
-			// InputStream is = getAssets().open("classes.dex");
-			// // 拿到輸出流
-			// FileOutputStream fileOutputStream = new FileOutputStream(
-			// bulidfile());
-			// // 创建byte数组将文件中的数据读到byte数组中
-			// byte[] byte1 = new byte[is.available()];
-			// is.read(byte1);
-			// fileOutputStream.write(encrypt(byte1, keyString));
+			InputStream is = getAssets().open("tangsilian.jar");
+			// 拿到輸出流
+			FileOutputStream fileOutputStream = new FileOutputStream(
+					bulidfile());
+			// 创建byte数组将文件中的数据读到byte数组中
+			byte[] byte1 = new byte[is.available()];
+			is.read(byte1);
+			fileOutputStream.write(encrypt(byte1, keyString));
 
 		} catch (Exception e) {
 			// TODO: handle exception
