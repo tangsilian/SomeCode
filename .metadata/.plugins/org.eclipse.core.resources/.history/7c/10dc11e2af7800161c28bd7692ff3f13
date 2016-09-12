@@ -1,0 +1,16 @@
+package matches;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class zhengze {
+	public static void main(String[] args) {
+		InputStream inScanner = System.in;
+		try {
+			inScanner.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

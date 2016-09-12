@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://www.mottoin.com/89035.html -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="dns-prefetch" href="http://apps.bdimg.com/">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="MottoIN">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<title>常见app加固厂商脱壳方法研究-MottoIN</title>
+<link rel="stylesheet" id="crayon-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/crayon.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-classic-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/classic.css" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/monaco.css" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/page-list.css" type="text/css" media="all">
+<link rel="stylesheet" id="_bootstrap-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="_fontawesome-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="_main-css" href="./常见app加固厂商脱壳方法研究-MottoIN_files/main.css" type="text/css" media="all">
+<script type="text/javascript" src="./常见app加固厂商脱壳方法研究-MottoIN_files/jquery.min.js"></script>
+<script type="text/javascript">var CrayonSyntaxSettings ={"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"http:\/\/www.mottoin.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};var CrayonSyntaxStrings ={"copy":"\u4f7f\u7528 %s \u590d\u5236\uff0c\u4f7f\u7528 %s \u7c98\u8d34\u3002","minimize":"\u70b9\u51fb\u5c55\u5f00\u4ee3\u7801"};</script>
+<script type="text/javascript" src="./常见app加固厂商脱壳方法研究-MottoIN_files/crayon.min.js"></script>
+<link rel="https://api.w.org/" href="http://www.mottoin.com/wp-json/">
+<link rel="prev" title="BadCode – 基于正则的代码审计工具" href="http://www.mottoin.com/89032.html">
+<link rel="next" title="HellRaiser: 基于端口的漏洞扫描及CVE标识" href="http://www.mottoin.com/89085.html">
+<link rel="canonical" href="http://www.mottoin.com/89035.html">
+<link rel="shortlink" href="http://www.mottoin.com/?p=89035">
+<link rel="alternate" type="application/json+oembed" href="http://www.mottoin.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.mottoin.com%2F89035.html">
+<link rel="alternate" type="text/xml+oembed" href="http://www.mottoin.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.mottoin.com%2F89035.html&amp;format=xml">
+<meta name="description" content="目录   	简述（脱壳前学习的知识、壳的历史、脱壳方法）  	第一代壳  	第二代壳  	第三代壳  	第N代壳  简述   	Apk文件结构  	Dex文件结构  	壳史  	壳的识别  Apk文件结构  Dex文件结构  壳史 第一代壳 Dex加密    	Dex字符串加密  	资源加密  	对抗反编译  	反调试  	自定义DexClassLoader">
+<link rel="shortcut icon" href="http://www.mottoin.com/favicon.ico">
+<!--[if lt IE 9]><script src="http://img.mottoin.com/wp-content/themes/dux/js/libs/html5.min.js"></script><![endif]-->
+<script async="" data-requirecontext="_" data-requiremodule="main" src="./常见app加固厂商脱壳方法研究-MottoIN_files/main.js"></script><script src="./常见app加固厂商脱壳方法研究-MottoIN_files/share.js"></script><script async="" data-requirecontext="_" data-requiremodule="signpop" src="./常见app加固厂商脱壳方法研究-MottoIN_files/signpop.js"></script><script async="" data-requirecontext="_" data-requiremodule="comment" src="./常见app加固厂商脱壳方法研究-MottoIN_files/comment.js"></script><link href="./常见app加固厂商脱壳方法研究-MottoIN_files/share.css" rel="styleSheet" type="text/css"><style type="text/css">.fancybox-margin{margin-right:15px;}</style></head>
+<body class="single single-post postid-89035 single-format-standard nav_fixed p_indent comment-open site-layout-2">
+<header class="header">
+<div class="container">
+<div class="logo"><a href="http://www.mottoin.com/" title="MottoIN-专注于互联网信息安全的科技媒体"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/logo.png">MottoIN</a></div> <div class="brand">猫头鹰<br>安全媒体-舆情早知道</div> <ul class="site-nav site-navbar">
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-54"><a href="http://www.mottoin.com/">首页</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a href="http://www.mottoin.com/news">资讯</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-28"><a href="http://www.mottoin.com/article">文章</a>
+<ul class="sub-menu">
+<li id="menu-item-29" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29"><a href="http://www.mottoin.com/article/web">Web安全</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35"><a href="http://www.mottoin.com/article/system">系统安全</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37"><a href="http://www.mottoin.com/article/network">网络安全</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36"><a href="http://www.mottoin.com/article/terminal">终端安全</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32"><a href="http://www.mottoin.com/article/database">数据安全</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33"><a href="http://www.mottoin.com/article/wireless">无线安全</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-34"><a href="http://www.mottoin.com/article/social">社会工程</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31"><a href="http://www.mottoin.com/article/intranet">内网渗透</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30"><a href="http://www.mottoin.com/article/code">代码审计</a></li>
+<li id="menu-item-84363" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-84363"><a href="http://www.mottoin.com/article/reverse">逆向破解</a></li>
+</ul>
+</li>
+<li id="menu-item-26" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26"><a href="http://www.mottoin.com/tools">工具</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38"><a href="http://www.mottoin.com/geek">极客</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-40"><a href="http://www.mottoin.com/sole">独家</a>
+<ul class="sub-menu">
+<li id="menu-item-84364" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84364"><a href="http://www.mottoin.com/sole/topic">专题</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41"><a href="http://www.mottoin.com/sole/people">人物</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43"><a href="http://www.mottoin.com/sole/view">观点</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42"><a href="http://www.mottoin.com/sole/events">活动</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44"><a href="http://www.mottoin.com/sole/video">视频</a></li>
+</ul>
+</li>
+<li id="menu-item-27" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27"><a href="http://www.mottoin.com/hr">招聘</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://www.mottoin.com/navs">安全导航</a></li>
+<li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+</ul>
+<div class="topbar">
+<ul class="site-nav topmenu">
+<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://www.mottoin.com/tags">标签云</a></li>
+<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://www.mottoin.com/readers">读者墙</a></li>
+<li id="menu-item-88056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88056"><a href="http://www.mottoin.com/contribute">我要投稿</a></li>
+<li class="menusns">
+<a href="javascript:;">关注本站 <i class="fa fa-angle-down"></i></a>
+<ul class="sub-menu">
+<li><a class="sns-wechat" href="javascript:;" title="关注”Mottoin“" data-src="http://img.mottoin.com/wp-content/uploads/2016/07/qrcode_for_gh_af32a7c58306_430.jpg"><i class="fa fa-wechat"></i> 微信</a></li> <li><a target="_blank" rel="external nofollow" href="http://weibo.com/mottoin"><i class="fa fa-weibo"></i> 微博</a></li> <li><a target="_blank" rel="external nofollow" href="http://weibo.com/mottoin"><i class="fa fa-tencent-weibo"></i> 腾讯微博</a></li> <li><a target="_blank" rel="external nofollow" href="http://weibo.com/mottoin"><i class="fa fa-twitter"></i> Twitter</a></li> <li><a target="_blank" rel="external nofollow" href="http://weibo.com/mottoin"><i class="fa fa-facebook"></i> Facebook</a></li> <li><a target="_blank" href="http://www.mottoin.com/feed"><i class="fa fa-rss"></i> RSS订阅</a></li> </ul>
+</li>
+</ul>
+<a href="javascript:;" class="signin-loader">Hi, 请登录</a>
+&nbsp; &nbsp; <a href="javascript:;" class="signup-loader">我要注册</a>
+&nbsp; &nbsp; <a href="http://www.mottoin.com/resent">找回密码</a>
+</div>
+<i class="fa fa-bars m-icon-nav"></i>
+</div>
+</header>
+<div class="site-search">
+<div class="container">
+<form method="get" class="site-search-form" action="http://www.mottoin.com/"><input class="search-input" name="s" type="text" placeholder="输入关键字" value=""><button class="search-btn" type="submit"><i class="fa fa-search"></i></button></form> </div>
+</div><section class="container">
+<div class="content-wrap">
+<div class="content">
+<header class="article-header">
+<h1 class="article-title"><a href="http://www.mottoin.com/89035.html">常见app加固厂商脱壳方法研究</a></h1>
+<div class="article-meta">
+<span class="item">2016-09-06</span>
+<span class="item">分类：未分类</span>
+<span class="item post-views">阅读(24)</span> <span class="item">评论(0)</span>
+<span class="item"></span>
+</div>
+</header>
+<article class="article-content">
+<h2>目录</h2>
+<ol>
+<li>简述（脱壳前学习的知识、壳的历史、脱壳方法）</li>
+<li>第一代壳</li>
+<li>第二代壳</li>
+<li>第三代壳</li>
+<li>第N代壳</li>
+</ol>
+<h2>简述</h2>
+<ol>
+<li>Apk文件结构</li>
+<li>Dex文件结构</li>
+<li>壳史</li>
+<li>壳的识别</li>
+</ol>
+<h3>Apk文件结构</h3>
+<p><img class="alignnone size-full wp-image-89036" src="./常见app加固厂商脱壳方法研究-MottoIN_files/1-15.png" alt="1" width="603" height="260" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/1-15.png 603w, http://img.mottoin.com/wp-content/uploads/2016/09/1-15-300x129.png 300w" sizes="(max-width: 603px) 100vw, 603px" data-tag="bdshare"></p>
+<h3>Dex文件结构</h3>
+<p><img class="alignnone size-full wp-image-89037" src="./常见app加固厂商脱壳方法研究-MottoIN_files/2-13.png" alt="2" width="631" height="578" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/2-13.png 631w, http://img.mottoin.com/wp-content/uploads/2016/09/2-13-300x275.png 300w" sizes="(max-width: 631px) 100vw, 631px" data-tag="bdshare"></p>
+<h3>壳史</h3>
+<p><strong>第一代壳 Dex加密 </strong></p>
+<ol>
+<li>Dex字符串加密</li>
+<li>资源加密</li>
+<li>对抗反编译</li>
+<li>反调试</li>
+<li>自定义DexClassLoader</li>
+</ol>
+<p><strong>第二代壳 Dex抽取与So加固 </strong></p>
+<ol>
+<li>对抗第一代壳常见的脱壳法</li>
+<li>Dex Method代码抽取到外部（通常企业版）</li>
+<li>Dex动态加载</li>
+<li>So加密</li>
+</ol>
+<p><strong>第三代壳 Dex动态解密与So混淆 </strong></p>
+<ol>
+<li>Dex Method代码动态解密</li>
+<li>So代码膨胀混淆</li>
+<li>对抗之前出现的所有脱壳法</li>
+</ol>
+<p><strong>第四代壳 arm vmp（未来） </strong></p>
+<ol>
+<li>vmp</li>
+</ol>
+<h3>壳的识别</h3>
+<p><strong>1.用加固厂商特征：</strong></p>
+<ul>
+<li>娜迦： libchaosvmp.so , libddog.solibfdog.so</li>
+<li>爱加密：libexec.so, libexecmain.so</li>
+<li>梆梆： libsecexe.so, libsecmain.so , libDexHelper.so</li>
+<li>360：libprotectClass.so, libjiagu.so</li>
+<li>通付盾：libegis.so</li>
+<li>网秦：libnqshield.so</li>
+<li>百度：libbaiduprotect.so</li>
+</ul>
+<p><strong>2.基于特征的识别代码</strong></p>
+<p><img class="alignnone size-full wp-image-89038" src="./常见app加固厂商脱壳方法研究-MottoIN_files/3-11.png" alt="3" width="1409" height="740" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/3-11.png 1409w, http://img.mottoin.com/wp-content/uploads/2016/09/3-11-300x158.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/3-11-768x403.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/3-11-1024x538.png 1024w" sizes="(max-width: 1409px) 100vw, 1409px" data-tag="bdshare"></p>
+<h2>第一代壳</h2>
+<ol>
+<li>内存Dump法</li>
+<li>文件监视法</li>
+<li>Hook法</li>
+<li>定制系统</li>
+<li>动态调试法</li>
+</ol>
+<h3>内存Dump法</h3>
+<ul>
+<li><strong>内存中寻找dex.035或者dex.036</strong></li>
+<li><strong>/proc/xxx/maps中查找后，手动Dump</strong></li>
+</ul>
+<p><img class="alignnone wp-image-89039 size-full" src="./常见app加固厂商脱壳方法研究-MottoIN_files/4-10.png" alt="4" width="1960" height="1230" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/4-10.png 1960w, http://img.mottoin.com/wp-content/uploads/2016/09/4-10-300x188.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/4-10-768x482.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/4-10-1024x643.png 1024w" sizes="(max-width: 1960px) 100vw, 1960px" data-tag="bdshare"></p>
+<ul>
+<li><strong>android-unpacker https://github.com/strazzere/android-unpacker </strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89040" src="./常见app加固厂商脱壳方法研究-MottoIN_files/5-11.png" alt="5" width="1520" height="1238" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/5-11.png 1520w, http://img.mottoin.com/wp-content/uploads/2016/09/5-11-300x244.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/5-11-768x626.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/5-11-1024x834.png 1024w" sizes="(max-width: 1520px) 100vw, 1520px" data-tag="bdshare"></p>
+<ul>
+<li><strong>drizzleDumper https://github.com/DrizzleRisk/drizzleDumper </strong></li>
+<li><strong>升级版的android-unpacker，read和lseek64代替pread，匹配dex代替匹配odex</strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89041" src="./常见app加固厂商脱壳方法研究-MottoIN_files/6-10.png" alt="6" width="1942" height="1234" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/6-10.png 1942w, http://img.mottoin.com/wp-content/uploads/2016/09/6-10-300x191.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/6-10-768x488.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/6-10-1024x651.png 1024w" sizes="(max-width: 1942px) 100vw, 1942px" data-tag="bdshare"></p>
+<ul>
+<li><strong>IDA Pro + dumpDEX</strong></li>
+<li><strong>dumpDex https://github.com/CvvT/dumpDex </strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89042" src="./常见app加固厂商脱壳方法研究-MottoIN_files/7-9.png" alt="7" width="2120" height="670" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/7-9.png 2120w, http://img.mottoin.com/wp-content/uploads/2016/09/7-9-300x95.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/7-9-768x243.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/7-9-1024x324.png 1024w" sizes="(max-width: 2120px) 100vw, 2120px" data-tag="bdshare"></p>
+<h3>文件监视法</h3>
+<ul>
+<li><strong>Dex优化生成odex</strong></li>
+<li><strong>inotifywait-for-Android https://github.com/mkttanabe/inotifywait-for-Android</strong></li>
+<li><strong>监视文件变化</strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89044" src="./常见app加固厂商脱壳方法研究-MottoIN_files/8-9.png" alt="8" width="1968" height="960" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/8-9.png 1968w, http://img.mottoin.com/wp-content/uploads/2016/09/8-9-300x146.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/8-9-768x375.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/8-9-1024x500.png 1024w" sizes="(max-width: 1968px) 100vw, 1968px" data-tag="bdshare"></p>
+<ul>
+<li><strong>notifywait-for-Android https://github.com/mkttanabe/inotifywait-for-Android</strong></li>
+<li><strong>监视DexOpt输出 </strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89045" src="./常见app加固厂商脱壳方法研究-MottoIN_files/9-9.png" alt="9" width="1680" height="872" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/9-9.png 1680w, http://img.mottoin.com/wp-content/uploads/2016/09/9-9-300x156.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/9-9-768x399.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/9-9-1024x532.png 1024w" sizes="(max-width: 1680px) 100vw, 1680px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89046" src="./常见app加固厂商脱壳方法研究-MottoIN_files/10-9.png" alt="10" width="1510" height="1022" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/10-9.png 1510w, http://img.mottoin.com/wp-content/uploads/2016/09/10-9-300x203.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/10-9-768x520.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/10-9-1024x693.png 1024w, http://img.mottoin.com/wp-content/uploads/2016/09/10-9-220x150.png 220w" sizes="(max-width: 1510px) 100vw, 1510px" data-tag="bdshare"></p>
+<h3>Hook法</h3>
+<ul>
+<li><strong>Hook dvmDexFileOpenPartial </strong></li>
+<li><strong>http://androidxref.com/4.4_r1/xref/dalvik/vm/DvmDex.cpp</strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89048" src="./常见app加固厂商脱壳方法研究-MottoIN_files/11-9.png" alt="11" width="2122" height="1120" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/11-9.png 2122w, http://img.mottoin.com/wp-content/uploads/2016/09/11-9-300x158.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/11-9-768x405.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/11-9-1024x540.png 1024w" sizes="(max-width: 2122px) 100vw, 2122px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89049" src="./常见app加固厂商脱壳方法研究-MottoIN_files/12-6.png" alt="12" width="1890" height="1124" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/12-6.png 1890w, http://img.mottoin.com/wp-content/uploads/2016/09/12-6-300x178.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/12-6-768x457.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/12-6-1024x609.png 1024w" sizes="(max-width: 1890px) 100vw, 1890px" data-tag="bdshare"></p>
+<h3>定制系统</h3>
+<ul>
+<li><strong>修改安卓源码并刷机</strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89050" src="./常见app加固厂商脱壳方法研究-MottoIN_files/13-5.png" alt="13" width="1840" height="994" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/13-5.png 1840w, http://img.mottoin.com/wp-content/uploads/2016/09/13-5-300x162.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/13-5-768x415.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/13-5-1024x553.png 1024w" sizes="(max-width: 1840px) 100vw, 1840px" data-tag="bdshare"></p>
+<ul>
+<li><strong>DumpApk https://github.com/CvvT/DumpApk</strong></li>
+<li><strong>只针对部分壳</strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89052" src="./常见app加固厂商脱壳方法研究-MottoIN_files/14-5.png" alt="14" width="2514" height="1038" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/14-5.png 2514w, http://img.mottoin.com/wp-content/uploads/2016/09/14-5-300x124.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/14-5-768x317.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/14-5-1024x423.png 1024w" sizes="(max-width: 2514px) 100vw, 2514px" data-tag="bdshare"></p>
+<h3>动态调试法</h3>
+<ul>
+<li><strong>IDA Pro</strong></li>
+</ul>
+<p><img class="alignnone size-full wp-image-89053" src="./常见app加固厂商脱壳方法研究-MottoIN_files/15-5.png" alt="15" width="325" height="218" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/15-5.png 325w, http://img.mottoin.com/wp-content/uploads/2016/09/15-5-300x201.png 300w" sizes="(max-width: 325px) 100vw, 325px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89054" src="./常见app加固厂商脱壳方法研究-MottoIN_files/16-5.png" alt="16" width="367" height="243" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/16-5.png 367w, http://img.mottoin.com/wp-content/uploads/2016/09/16-5-300x199.png 300w" sizes="(max-width: 367px) 100vw, 367px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89055" src="./常见app加固厂商脱壳方法研究-MottoIN_files/17-5.png" alt="17" width="614" height="119" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/17-5.png 614w, http://img.mottoin.com/wp-content/uploads/2016/09/17-5-300x58.png 300w" sizes="(max-width: 614px) 100vw, 614px" data-tag="bdshare"></p>
+<ul>
+<li><strong>gdb gcore法</strong></li>
+</ul>
+<p></p>
+<div id="crayon-57cfe00fa75de057716942" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="切换是否显示行编号"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码" style="display: none;"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-copy-button" title="复制代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">.gdbserver :1234 –attach pid 
+.gdb 
+(gdb) target remote :1234 
+(gdb) gcore</textarea></div>
+<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+<table class="crayon-table">
+<tbody><tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-57cfe00fa75de057716942-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-57cfe00fa75de057716942-2">2</div><div class="crayon-num" data-line="crayon-57cfe00fa75de057716942-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-57cfe00fa75de057716942-4">4</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57cfe00fa75de057716942-1"><span class="crayon-sy">.</span><span class="crayon-v">gdbserver</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-cn">1234</span><span class="crayon-h"> </span>–<span class="crayon-e">attach </span><span class="crayon-i">pid</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-57cfe00fa75de057716942-2"><span class="crayon-sy">.</span><span class="crayon-e">gdb</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-57cfe00fa75de057716942-3"><span class="crayon-sy">(</span><span class="crayon-v">gdb</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-e">target </span><span class="crayon-v">remote</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-cn">1234</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-57cfe00fa75de057716942-4"><span class="crayon-sy">(</span><span class="crayon-v">gdb</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-v">gcore</span></div></div></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p>coredump文件中搜索“dex.035”</p>
+<p><img class="alignnone size-full wp-image-89056" src="./常见app加固厂商脱壳方法研究-MottoIN_files/18-3.png" alt="18" width="1552" height="456" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/18-3.png 1552w, http://img.mottoin.com/wp-content/uploads/2016/09/18-3-300x88.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/18-3-768x226.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/18-3-1024x301.png 1024w" sizes="(max-width: 1552px) 100vw, 1552px" data-tag="bdshare"></p>
+<h2>第二代壳</h2>
+<ol>
+<li>内存重组法</li>
+<li>Hook法</li>
+<li>动态调试</li>
+<li>定制系统</li>
+<li>静态脱壳机</li>
+</ol>
+<h3>内存重组法</h3>
+<p><strong>Dex篇</strong></p>
+<p>ZjDroid http://bbs.pediy.com/showthread.php?t=190494</p>
+<p>对付一切内存中完整的dex，包括壳与动态加载的jar</p>
+<p><img class="alignnone size-full wp-image-89057" src="./常见app加固厂商脱壳方法研究-MottoIN_files/19-3.png" alt="19" width="640" height="127" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/19-3.png 640w, http://img.mottoin.com/wp-content/uploads/2016/09/19-3-300x60.png 300w" sizes="(max-width: 640px) 100vw, 640px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89058" src="./常见app加固厂商脱壳方法研究-MottoIN_files/20-2.png" alt="20" width="641" height="78" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/20-2.png 641w, http://img.mottoin.com/wp-content/uploads/2016/09/20-2-300x37.png 300w" sizes="(max-width: 641px) 100vw, 641px" data-tag="bdshare"></p>
+<p><strong>so篇</strong></p>
+<p>elfrebuild</p>
+<p><img class="alignnone size-full wp-image-89059" src="./常见app加固厂商脱壳方法研究-MottoIN_files/21-2.png" alt="21" width="767" height="526" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/21-2.png 767w, http://img.mottoin.com/wp-content/uploads/2016/09/21-2-300x206.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/21-2-220x150.png 220w" sizes="(max-width: 767px) 100vw, 767px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89060" src="./常见app加固厂商脱壳方法研究-MottoIN_files/22-3.png" alt="22" width="256" height="309" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/22-3.png 256w, http://img.mottoin.com/wp-content/uploads/2016/09/22-3-249x300.png 249w" sizes="(max-width: 256px) 100vw, 256px" data-tag="bdshare"></p>
+<p>构造soinfo，然后对其进行重建</p>
+<p><img class="alignnone size-full wp-image-89061" src="./常见app加固厂商脱壳方法研究-MottoIN_files/23-2.png" alt="23" width="420" height="274" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/23-2.png 420w, http://img.mottoin.com/wp-content/uploads/2016/09/23-2-300x196.png 300w" sizes="(max-width: 420px) 100vw, 420px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89062" src="./常见app加固厂商脱壳方法研究-MottoIN_files/24-2.png" alt="24" width="736" height="177" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/24-2.png 736w, http://img.mottoin.com/wp-content/uploads/2016/09/24-2-300x72.png 300w" sizes="(max-width: 736px) 100vw, 736px" data-tag="bdshare"></p>
+<h3>Hook法</h3>
+<p>针对无代码抽取且Hook dvmDexFileOpenPartial失败</p>
+<p>Hook dexFileParse</p>
+<p>http://androidxref.com/4.4_r1/xref/dalvik/vm/DvmDex.cpp</p>
+<p><img class="alignnone size-full wp-image-89063" src="./常见app加固厂商脱壳方法研究-MottoIN_files/25.png" alt="25" width="550" height="287" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/25.png 550w, http://img.mottoin.com/wp-content/uploads/2016/09/25-300x157.png 300w" sizes="(max-width: 550px) 100vw, 550px" data-tag="bdshare"></p>
+<p>https://github.com/WooyunDota/DumpDex</p>
+<p><img class="alignnone size-full wp-image-89064" src="./常见app加固厂商脱壳方法研究-MottoIN_files/26-1.png" alt="26" width="1956" height="1126" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/26-1.png 1956w, http://img.mottoin.com/wp-content/uploads/2016/09/26-1-300x173.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/26-1-768x442.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/26-1-1024x589.png 1024w" sizes="(max-width: 1956px) 100vw, 1956px" data-tag="bdshare"></p>
+<p>针对无代码抽取且Hook dexFileParse失败</p>
+<p>Hook memcmp</p>
+<p>http://androidxref.com/4.4_r1/xref/dalvik/vm/DvmDex.cpp</p>
+<p><img class="alignnone size-full wp-image-89065" src="./常见app加固厂商脱壳方法研究-MottoIN_files/27.png" alt="27" width="1946" height="1330" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/27.png 1946w, http://img.mottoin.com/wp-content/uploads/2016/09/27-300x205.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/27-768x525.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/27-1024x700.png 1024w, http://img.mottoin.com/wp-content/uploads/2016/09/27-220x150.png 220w" sizes="(max-width: 1946px) 100vw, 1946px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89066" src="./常见app加固厂商脱壳方法研究-MottoIN_files/28.png" alt="28" width="1678" height="1224" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/28.png 1678w, http://img.mottoin.com/wp-content/uploads/2016/09/28-300x219.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/28-768x560.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/28-1024x747.png 1024w" sizes="(max-width: 1678px) 100vw, 1678px" data-tag="bdshare"></p>
+<h3>定制系统</h3>
+<p>修改安卓源码并刷机－针对无抽取代码</p>
+<p>https://github.com/bunnyblue/DexExtractor</p>
+<p><img class="alignnone size-full wp-image-89067" src="./常见app加固厂商脱壳方法研究-MottoIN_files/29.png" alt="29" width="1840" height="756" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/29.png 1840w, http://img.mottoin.com/wp-content/uploads/2016/09/29-300x123.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/29-768x316.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/29-1024x421.png 1024w" sizes="(max-width: 1840px) 100vw, 1840px" data-tag="bdshare"></p>
+<p>Hook dexfileParse</p>
+<p><img class="alignnone size-full wp-image-89068" src="./常见app加固厂商脱壳方法研究-MottoIN_files/30.png" alt="30" width="1562" height="460" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/30.png 1562w, http://img.mottoin.com/wp-content/uploads/2016/09/30-300x88.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/30-768x226.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/30-1024x302.png 1024w" sizes="(max-width: 1562px) 100vw, 1562px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89069" src="./常见app加固厂商脱壳方法研究-MottoIN_files/31.png" alt="31" width="2010" height="694" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/31.png 2010w, http://img.mottoin.com/wp-content/uploads/2016/09/31-300x104.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/31-768x265.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/31-1024x354.png 1024w" sizes="(max-width: 2010px) 100vw, 2010px" data-tag="bdshare"></p>
+<p>DexHunter-最强大的二代壳脱壳工具</p>
+<p>https://github.com/zyq8709/DexHunter</p>
+<p>DexHunter的工作流程：</p>
+<p><img class="alignnone size-full wp-image-89070" src="./常见app加固厂商脱壳方法研究-MottoIN_files/32.png" alt="32" width="2070" height="1167" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/32.png 2070w, http://img.mottoin.com/wp-content/uploads/2016/09/32-300x169.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/32-768x433.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/32-1024x577.png 1024w" sizes="(max-width: 2070px) 100vw, 2070px" data-tag="bdshare"></p>
+<p>DexHunter的工作原理：</p>
+<p><img class="alignnone size-full wp-image-89071" src="./常见app加固厂商脱壳方法研究-MottoIN_files/33.png" alt="33" width="1829" height="1116" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/33.png 1829w, http://img.mottoin.com/wp-content/uploads/2016/09/33-300x183.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/33-768x469.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/33-1024x625.png 1024w" sizes="(max-width: 1829px) 100vw, 1829px" data-tag="bdshare"></p>
+<p>绕过三进程反调试</p>
+<p>http://bbs.pediy.com/showthread.php?p=1439627</p>
+<p><img class="alignnone size-full wp-image-89072" src="./常见app加固厂商脱壳方法研究-MottoIN_files/34.png" alt="34" width="600" height="99" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/34.png 600w, http://img.mottoin.com/wp-content/uploads/2016/09/34-300x50.png 300w" sizes="(max-width: 600px) 100vw, 600px" data-tag="bdshare"></p>
+<p><img class="alignnone size-full wp-image-89073" src="./常见app加固厂商脱壳方法研究-MottoIN_files/35.png" alt="35" width="499" height="600" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/35.png 499w, http://img.mottoin.com/wp-content/uploads/2016/09/35-250x300.png 250w" sizes="(max-width: 499px) 100vw, 499px" data-tag="bdshare"></p>
+<p>修改系统源码后：</p>
+<p><img class="alignnone size-full wp-image-89074" src="./常见app加固厂商脱壳方法研究-MottoIN_files/36.png" alt="36" width="875" height="69" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/36.png 875w, http://img.mottoin.com/wp-content/uploads/2016/09/36-300x24.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/36-768x61.png 768w" sizes="(max-width: 875px) 100vw, 875px" data-tag="bdshare"></p>
+<p>http://www.cnblogs.com/lvcha/p/3903669.html</p>
+<p><img class="alignnone size-full wp-image-89075" src="./常见app加固厂商脱壳方法研究-MottoIN_files/37.png" alt="37" width="1218" height="304" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/37.png 1218w, http://img.mottoin.com/wp-content/uploads/2016/09/37-300x75.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/37-768x192.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/37-1024x256.png 1024w" sizes="(max-width: 1218px) 100vw, 1218px" data-tag="bdshare"></p>
+<div id="crayon-57cfe00fa7615654739584" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; z-index: 4;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="切换是否显示行编号"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码" style="display: none;"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-copy-button" title="复制代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">ls /proc/345/task</textarea></div>
+<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+<table class="crayon-table">
+<tbody><tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-57cfe00fa7615654739584-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57cfe00fa7615654739584-1"><span class="crayon-v">ls</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-v">proc</span><span class="crayon-o">/</span><span class="crayon-cn">345</span><span class="crayon-o">/</span><span class="crayon-v">task</span></div></div></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p><img class="alignnone size-full wp-image-89076" src="./常见app加固厂商脱壳方法研究-MottoIN_files/38.png" alt="38" width="496" height="496" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/38.png 496w, http://img.mottoin.com/wp-content/uploads/2016/09/38-150x150.png 150w, http://img.mottoin.com/wp-content/uploads/2016/09/38-300x300.png 300w" sizes="(max-width: 496px) 100vw, 496px" data-tag="bdshare"></p>
+<div id="crayon-57cfe00fa7623001297622" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; position: absolute; z-index: 2;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="切换是否显示行编号"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码" style="display: none;"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-copy-button" title="复制代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">./gdbserver :1234 --attach346 
+... 
+(gdb) gcore</textarea></div>
+<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+<table class="crayon-table">
+<tbody><tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-57cfe00fa7623001297622-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-57cfe00fa7623001297622-2">2</div><div class="crayon-num" data-line="crayon-57cfe00fa7623001297622-3">3</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57cfe00fa7623001297622-1"><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-v">gdbserver</span><span class="crayon-h"> </span><span class="crayon-o">:</span><span class="crayon-cn">1234</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-i">attach346</span><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-57cfe00fa7623001297622-2"><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-sy">.</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-57cfe00fa7623001297622-3"><span class="crayon-sy">(</span><span class="crayon-v">gdb</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-v">gcore</span></div></div></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p>gcore防Dump解决方案：</p>
+<p>http://bbs.pediy.com/showthread.php?t=198995</p>
+<p>断点mmap调试，针对Hook dexFileParse无效</p>
+<p>原理： dexopt优化时， dvmContinueOptimization()-&gt;mmap()</p>
+<p><img class="alignnone size-full wp-image-89078" src="./常见app加固厂商脱壳方法研究-MottoIN_files/39.png" alt="39" width="2174" height="990" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/39.png 2174w, http://img.mottoin.com/wp-content/uploads/2016/09/39-300x137.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/39-768x350.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/39-1024x466.png 1024w" sizes="(max-width: 2174px) 100vw, 2174px" data-tag="bdshare"></p>
+<h3>静态脱壳机</h3>
+<p>分析壳so逻辑并还原加密算法</p>
+<p>http://www.cnblogs.com/2014asm/p/4924342.html</p>
+<p><img class="alignnone size-full wp-image-89079" src="./常见app加固厂商脱壳方法研究-MottoIN_files/40.png" alt="40" width="1223" height="649" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/40.png 1223w, http://img.mottoin.com/wp-content/uploads/2016/09/40-300x159.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/40-768x408.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/40-1024x543.png 1024w" sizes="(max-width: 1223px) 100vw, 1223px" data-tag="bdshare"></p>
+<p>自定义linker脱so壳</p>
+<p>https://github.com/devilogic/udog</p>
+<div id="crayon-57cfe00fa7630434100182" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+<div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 12px !important; height: 18px !important; line-height: 18px !important; margin-top: -18px; display: none; z-index: 4;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="切换是否显示行编号"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码" style="display: none;"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-copy-button" title="复制代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon" style="background-image: url(&quot;http://img.mottoin.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png&quot;); background-size: 48px 128px;"></div></div></div></div>
+<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;">main() -&amp;gt; dump_file()</textarea></div>
+<div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+<table class="crayon-table">
+<tbody><tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-57cfe00fa7630434100182-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57cfe00fa7630434100182-1"><span class="crayon-e">main</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-o">&amp;</span><span class="crayon-v">gt</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-e">dump_file</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div></div></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p><img class="alignnone size-full wp-image-89080" src="./常见app加固厂商脱壳方法研究-MottoIN_files/41.png" alt="41" width="1286" height="1674" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/41.png 1286w, http://img.mottoin.com/wp-content/uploads/2016/09/41-230x300.png 230w, http://img.mottoin.com/wp-content/uploads/2016/09/41-768x1000.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/41-787x1024.png 787w" sizes="(max-width: 1286px) 100vw, 1286px" data-tag="bdshare"></p>
+<h2>第三代壳</h2>
+<ol>
+<li>dex2oat法</li>
+<li>定制系统</li>
+</ol>
+<h3>dex2oat法</h3>
+<p>ART模式下，dex2oat生成oat时，内存中的DEX是完整的</p>
+<p>http://bbs.pediy.com/showthread.php?t=210532</p>
+<p><img class="alignnone size-full wp-image-89081" src="./常见app加固厂商脱壳方法研究-MottoIN_files/43.png" alt="43" width="1824" height="1210" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/43.png 1824w, http://img.mottoin.com/wp-content/uploads/2016/09/43-300x199.png 300w, http://img.mottoin.com/wp-content/uploads/2016/09/43-768x509.png 768w, http://img.mottoin.com/wp-content/uploads/2016/09/43-1024x679.png 1024w" sizes="(max-width: 1824px) 100vw, 1824px" data-tag="bdshare"></p>
+<h3>定制系统</h3>
+<p>Hook Dalvik_dalvik_system_DexFile_defineClassNative</p>
+<p>枚举所有DexClassDef，对所有的class，调用dvmDefineClass进行强制加载</p>
+<p><img class="alignnone size-full wp-image-89082" src="./常见app加固厂商脱壳方法研究-MottoIN_files/44-1.png" alt="44" width="576" height="212" srcset="http://img.mottoin.com/wp-content/uploads/2016/09/44-1.png 576w, http://img.mottoin.com/wp-content/uploads/2016/09/44-1-300x110.png 300w" sizes="(max-width: 576px) 100vw, 576px" data-tag="bdshare"></p>
+<h2>第N代壳</h2>
+<ol>
+<li>so + vmp</li>
+<li>动态调试 ＋ 人肉还原</li>
+</ol>
+<p>&nbsp;</p>
+<p style="text-align: center;">来自：Digg 投稿&nbsp;&nbsp;Mottoin原创稿件，未经允许禁止转载！</p>
+<p class="post-copyright">未经允许不得转载：<a href="http://www.mottoin.com/">MottoIN</a> » <a href="http://www.mottoin.com/89035.html">常见app加固厂商脱壳方法研究</a></p> </article>
+<div class="action-share bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1473241089130">
+<span>分享到：</span><a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a class="bds_bdhome" data-cmd="bdhome" title="分享到百度新首页"></a><a class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a><a class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a class="bds_diandian" data-cmd="diandian" title="分享到点点网"></a><a class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a class="bds_ty" data-cmd="ty" title="分享到天涯社区"></a><a class="bds_kaixin001" data-cmd="kaixin001" title="分享到开心网"></a><a class="bds_taobao" data-cmd="taobao"></a><a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a class="bds_more" data-cmd="more">更多</a> <span>(</span><a class="bds_count" data-cmd="count" title="累计分享0次">0</a><span>)</span> </div>
+<div class="article-tags"></div>
+<div class="relates"><div class="title"><h3>相关推荐</h3></div><ul><li>暂无文章</li></ul></div> <div class="title" id="comments">
+<h3>评论 <small>抢沙发</small></h3>
+</div>
+<div id="respond" class="no_webshot">
+<div class="comment-signarea">
+<h3 class="text-muted">评论前必须登录！</h3>
+<p>
+<a href="javascript:;" class="btn btn-primary signin-loader">立即登录</a> &nbsp;
+<a href="javascript:;" class="btn btn-default signup-loader">注册</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="sidebar">
+<div class="widget widget_ui_ads"><div class="item"><a href="http://www.jomotto.com/arrisec.html" target="_blank"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/team.jpg"></a></div></div><div class="widget widget_ui_textasb"><a class="style01" href="http://www.jomotto.com/" target="_blank"><strong>吐血推荐</strong><h2>懋彤信息-JoMotto</h2><p>上海懋彤信息科技有限公司以“数据驱动安全”为愿景，利用大数据和云计算应对企业信息安全挑战。构建网络态势感知体系，持续性威胁监测，全方位保障企业数据、产品、网站、应用和服务安全。</p></a></div><div class="widget widget_ui_ads"><div class="item"><a href="./常见app加固厂商脱壳方法研究-MottoIN_files/qrcode_for_gh_af32a7c58306_430.jpg" target="_blank"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/qrcode_for_gh_af32a7c58306_430.jpg"></a></div></div><div class="widget widget_ui_textasb"><a class="style01" href="http://shang.qq.com/wpa/qunwpa?idkey=5fe0220a0e1281ba68bac4e81dfd380662869ce528d913d5f121aa235a24af90" target="_blank"><strong>加群啦！！！</strong><h2>MottoIN 官方交流群</h2><p>MottoIn：91954310
+<br>
+<br>欢迎大家随时加入！
+<br>
+<br><img border="0" src="./常见app加固厂商脱壳方法研究-MottoIN_files/group.png" alt="MottoIn" title="MottoIn"></p></a></div><div class="widget widget_ui_posts"><h3>热门文章</h3><ul><li><a target="_blank" href="http://www.mottoin.com/84342.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/1433086667939204.png-220x150.jpg" alt="Nginx攻击日志分析-MottoIN" class="thumb"></span><span class="text">Nginx攻击日志分析</span><span class="muted">2016-07-20</span><span class="muted">评论(8)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/86354.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/Fig2-220x150.png" alt="FAKENET-NG：下一代动态网络分析工具-MottoIN" class="thumb"></span><span class="text">FAKENET-NG：下一代动态网络分析工具</span><span class="muted">2016-08-05</span><span class="muted">评论(4)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/86226.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/BlackHat-2016-3-624x468-624x468-220x150.jpg" alt="BlackHat 2016第一天会议精彩议题回顾(附PPT下载)-MottoIN" class="thumb"></span><span class="text">BlackHat 2016第一天会议精彩议题回顾(附PPT下载)</span><span class="muted">2016-08-04</span><span class="muted">评论(4)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/85943.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/20130412002211_66246-220x150.jpg" alt="从外网注入引发的内网血案-MottoIN" class="thumb"></span><span class="text">从外网注入引发的内网血案</span><span class="muted">2016-08-02</span><span class="muted">评论(3)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/86117.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/2-14-220x150.png" alt="Apache Shiro Java 反序列化漏洞分析-MottoIN" class="thumb"></span><span class="text">Apache Shiro Java 反序列化漏洞分析</span><span class="muted">2016-08-03</span><span class="muted">评论(3)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/85364.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/Cyber_Bully-220x150.jpg" alt="SaiProbe V1.0 内网渗透辅助脚本-MottoIN" class="thumb"></span><span class="text">SaiProbe V1.0 内网渗透辅助脚本</span><span class="muted">2016-07-29</span><span class="muted">评论(2)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/85333.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/640-6-220x150.jpg" alt="LastPass存在一个严重漏洞，可泄露你的全部密码-MottoIN" class="thumb"></span><span class="text">LastPass存在一个严重漏洞，可泄露你的全部密码</span><span class="muted">2016-07-28</span><span class="muted">评论(2)</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/85300.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/CBStrike-220x150.png" alt="Cobalt strike browser pivot的应用实例-MottoIN" class="thumb"></span><span class="text">Cobalt strike browser pivot的应用实例</span><span class="muted">2016-07-28</span><span class="muted">评论(2)</span></a></li>
+</ul></div><div class="widget widget_ui_posts"><h3>置顶推荐</h3><ul><li><a target="_blank" href="http://www.mottoin.com/89085.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/result00-220x150.png" alt="HellRaiser: 基于端口的漏洞扫描及CVE标识-MottoIN" class="thumb"></span><span class="text">HellRaiser: 基于端口的漏洞扫描及CVE标识</span><span class="muted">2016-09-06</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/89035.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/psds35695-220x150.jpg" alt="常见app加固厂商脱壳方法研究-MottoIN" class="thumb"></span><span class="text">常见app加固厂商脱壳方法研究</span><span class="muted">2016-09-06</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/89032.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/1-14-220x150.png" alt="BadCode - 基于正则的代码审计工具-MottoIN" class="thumb"></span><span class="text">BadCode – 基于正则的代码审计工具</span><span class="muted">2016-09-06</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/88992.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/IMG_2327-220x150.jpg" alt="京东代码安全审计平台第一期建设思路-MottoIN" class="thumb"></span><span class="text">京东代码安全审计平台第一期建设思路</span><span class="muted">2016-09-05</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/88941.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/1-11-220x150.png" alt="Kali Linux 2016.2初体验-MottoIN" class="thumb"></span><span class="text">Kali Linux 2016.2初体验</span><span class="muted">2016-09-05</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/88970.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/64965070201304181125484061603230163_002-220x150.jpg" alt="GitHub上10大最热门安全开源项目-MottoIN" class="thumb"></span><span class="text">GitHub上10大最热门安全开源项目</span><span class="muted">2016-09-05</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/88943.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/5be69fc4168a90ce2947e262e27d1151_500_429-220x150.jpg" alt="基于Android平台的渗透测试工具兵器谱-MottoIN" class="thumb"></span><span class="text">基于Android平台的渗透测试工具兵器谱</span><span class="muted">2016-09-05</span><span class="muted">评论()</span></a></li>
+<li><a target="_blank" href="http://www.mottoin.com/88915.html"><span class="thumbnail"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/18-1-220x150.png" alt="隐写技巧——在PE文件的数字证书中隐藏Payload-MottoIN" class="thumb"></span><span class="text">隐写技巧——在PE文件的数字证书中隐藏Payload</span><span class="muted">2016-09-05</span><span class="muted">评论()</span></a></li>
+</ul></div><div class="widget widget_ui_comments"><h3>最新评论</h3><ul></ul></div><div class="widget widget_ui_readers"><h3>活跃读者</h3><ul></ul></div></aside></section>
+<div class="branding branding-black">
+<div class="container">
+<h2>MottoIN 换一个角度看安全</h2>
+<a target="blank" class="btn btn-lg" href="http://www.mottoin.com/report">寻求报道</a><a target="blank" class="btn btn-lg" href="http://www.mottoin.com/contact">联系我们</a> </div>
+</div>
+<footer class="footer">
+<div class="container">
+<p>© 2016 <a href="http://www.mottoin.com/">MottoIN</a> &nbsp; <a href="http://www.mottoin.com/sitemap.xml">网站地图</a>
+</p>
+<a href="https://www.upyun.com/index.html" target="_blank"><img src="./常见app加固厂商脱壳方法研究-MottoIN_files/upyun.png"></a> </div>
+</footer>
+<script>window.jsui={www:'http://www.mottoin.com',uri:'http://www.mottoin.com/wp-content/themes/dux',ver:'1.5',roll:["1","2","3"],ajaxpager:'5',url_rp:'http://www.mottoin.com/resent'
+};</script>
+<script type="text/javascript" src="./常见app加固厂商脱壳方法研究-MottoIN_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="./常见app加固厂商脱壳方法研究-MottoIN_files/loader.js"></script>
+<script type="text/javascript" src="./常见app加固厂商脱壳方法研究-MottoIN_files/wp-embed.min.js"></script>
+
+    <div class="m-mask"></div>    <div class="rollbar"><ul><li><a href="javascript:(scrollTo(&#39;#comments&#39;,-15));"><i class="fa fa-comments"></i></a><h6>去评论<i></i></h6></li><li><a href="javascript:(scrollTo());"><i class="fa fa-angle-up"></i></a><h6>去顶部<i></i></h6></li>    </ul></div><ul class="m-navbar">
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-54"><a href="http://www.mottoin.com/">首页</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a href="http://www.mottoin.com/news">资讯</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-28"><a href="http://www.mottoin.com/article">文章</a>
+<ul class="sub-menu">
+<li id="menu-item-29" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-29"><a href="http://www.mottoin.com/article/web">Web安全</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35"><a href="http://www.mottoin.com/article/system">系统安全</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37"><a href="http://www.mottoin.com/article/network">网络安全</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-36"><a href="http://www.mottoin.com/article/terminal">终端安全</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32"><a href="http://www.mottoin.com/article/database">数据安全</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33"><a href="http://www.mottoin.com/article/wireless">无线安全</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-34"><a href="http://www.mottoin.com/article/social">社会工程</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31"><a href="http://www.mottoin.com/article/intranet">内网渗透</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30"><a href="http://www.mottoin.com/article/code">代码审计</a></li>
+<li id="menu-item-84363" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-84363"><a href="http://www.mottoin.com/article/reverse">逆向破解</a></li>
+</ul>
+</li>
+<li id="menu-item-26" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26"><a href="http://www.mottoin.com/tools">工具</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38"><a href="http://www.mottoin.com/geek">极客</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-40"><a href="http://www.mottoin.com/sole">独家</a>
+<ul class="sub-menu">
+<li id="menu-item-84364" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-84364"><a href="http://www.mottoin.com/sole/topic">专题</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41"><a href="http://www.mottoin.com/sole/people">人物</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-43"><a href="http://www.mottoin.com/sole/view">观点</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-42"><a href="http://www.mottoin.com/sole/events">活动</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44"><a href="http://www.mottoin.com/sole/video">视频</a></li>
+</ul>
+</li>
+<li id="menu-item-27" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27"><a href="http://www.mottoin.com/hr">招聘</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="http://www.mottoin.com/navs">安全导航</a></li>
+<li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+</ul>			<div class="sign">			    <div class="sign-mask"></div>			    <div class="container">			        <a href="javascript:;" class="close-link signclose-loader"><i class="fa fa-close"></i></a>			        <div class="sign-tips"></div>			        <form id="sign-in">  			            <h3><small class="signup-loader">切换注册</small>登录</h3>			            <h6>			                <label for="inputEmail">用户名或邮箱</label>			                <input type="text" name="username" class="form-control" id="inputEmail" placeholder="用户名或邮箱">			            </h6>			            <h6>			                <label for="inputPassword">密码</label>			                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="登录密码">			            </h6>			            <div class="sign-submit">			                <input type="button" class="btn btn-primary signsubmit-loader" name="submit" value="登录">  			                <input type="hidden" name="action" value="signin">			                <label><input type="checkbox" checked="checked" name="remember" value="forever">记住我</label>			            </div><div class="sign-info"><a href="http://www.mottoin.com/resent">找回密码？</a></div></form>			        <form id="sign-up"> 			            <h3><small class="signin-loader">切换登录</small>注册</h3>			            <h6>			                <label for="inputName">昵称</label>			                <input type="text" name="name" class="form-control" id="inputName" placeholder="设置昵称">			            </h6>			            <h6>			                <label for="inputEmail">邮箱</label>			                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="邮箱">			            </h6>			            <div class="sign-submit">			                <input type="button" class="btn btn-primary btn-block signsubmit-loader" name="submit" value="快速注册">  			                <input type="hidden" name="action" value="signup">  			            </div>			        </form>			    </div>			</div>		</body></html>

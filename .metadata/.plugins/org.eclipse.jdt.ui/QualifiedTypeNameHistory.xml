@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="java.security.SecureRandom"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="org.apache.http.util.EncodingUtils"/>
-<fullyQualifiedTypeName name="android.content.res.AssetManager"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.io.File"/>
@@ -23,4 +22,5 @@
 <fullyQualifiedTypeName name="android.app.Application"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.content.res.AssetManager"/>
 </qualifiedTypeNameHistroy>

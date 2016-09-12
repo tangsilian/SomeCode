@@ -1,0 +1,47 @@
+package matches;
+
+import java.io.IOException;
+
+public class zhengze {
+	public static void main(String[] args) {
+
+	}
+
+	/**
+	 * 读取返回int
+	 * 
+	 * @return
+	 */
+	public int ReturnInt() {
+		int i = 0;
+		try {
+			// 读取返回的是int类型的
+			i = System.in.read();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		// 强制转换
+		System.out.println((char) i);
+		return i;
+	}
+
+	/**
+	 * 用数组作为缓冲
+	 */
+	public void byteBuffer() {
+		// 先写一个缓冲空间
+		byte[] bytebuffer = new byte[1024];
+		int n;
+		//读取数据
+		try {
+			 n=System.in.read(bytebuffer);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//int to String 
+String string=String(n);
+	}
+
+}
