@@ -1,0 +1,19 @@
+package decode;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.security.Key;
+import java.security.spec.AlgorithmParameterSpec;
+
+public class jiemi {
+	static {
+		char[] a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+				.toCharArray();
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

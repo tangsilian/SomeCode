@@ -1,0 +1,53 @@
+package decode;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.security.spec.AlgorithmParameterSpec;
+
+public class jiemi {
+	static {
+		char[] a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+				.toCharArray();
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+	public static String b(String arg5) {
+		String v0_2;
+		try {
+			byte[] v0_1 = a(arg5);
+			IvParameterSpec v1 = new IvParameterSpec(xc.a);
+			SecretKeySpec v2 = new SecretKeySpec("MARKETCC".getBytes(), "DES");
+			Cipher v3 = Cipher.getInstance("DES/CBC/PKCS5Padding");
+			v3.init(2, ((Key) v2), ((AlgorithmParameterSpec) v1));
+			v0_2 = new String(v3.doFinal(v0_1), "utf-8");
+		} catch (Exception v0) {
+			v0.printStackTrace();
+			v0_2 = "";
+		}
+
+		return v0_2;
+	}
+
+	public static byte[] a(String arg5) {
+		ByteArrayOutputStream v0 = new ByteArrayOutputStream();
+		try {
+			xd.a(arg5, ((OutputStream) v0));
+		} catch (IOException v0_1) {
+			throw new RuntimeException();
+		}
+
+		byte[] v1 = v0.toByteArray();
+		try {
+			v0.close();
+		} catch (IOException v0_1) {
+			System.err.println("Error while decoding BASE64: "
+					+ v0_1.toString());
+		}
+
+		return v1;
+	}
+}

@@ -1,0 +1,25 @@
+#特征函数
+##激活设备管理器、抵抗卸载
+DevicePolicyManager
+Intent intent = new Intent(  
+        DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);  
+intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN,  
+        mDeviceComponentName);  
+intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,  
+        "（自定义区域2）");  
+startActivityForResult(intent, RESULT_ENABLE);
+
+##获取通话记录
+权限：  <uses-permission android:name="android.permission.READ_CALL_LOG" />  
+
+.query(CallLog.Calls.CONTENT_URI, //系统方式获取通讯录存储地址  
+              new String[]{  
+              CallLog.Calls.CACHED_NAME,  //姓名  
+                         CallLog.Calls.NUMBER,    //号码  
+                         CallLog.Calls.TYPE,  //呼入/呼出(2)/未接  
+                         CallLog.Calls.DATE,  //拨打时间  
+                         CallLog.Calls.DURATION   //通话时长                       
+                         },null,null,CallLog.Calls.DEFAULT_SORT_ORDER);  
+						 
+				
+				

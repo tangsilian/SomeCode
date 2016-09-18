@@ -1,0 +1,14 @@
+package decode;
+
+
+public class jiemi {
+	static {
+		char[] a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+				.toCharArray();
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}
