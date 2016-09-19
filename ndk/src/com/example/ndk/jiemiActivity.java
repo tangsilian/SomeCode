@@ -3,8 +3,6 @@ package com.example.ndk;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.security.Key;
 import java.security.spec.AlgorithmParameterSpec;
 
@@ -15,10 +13,7 @@ import javax.crypto.spec.SecretKeySpec;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.widget.TextView;
-import android.widget.Toast;
-import dalvik.system.DexClassLoader;
 
 public class jiemiActivity extends Activity {
 
@@ -39,6 +34,8 @@ public class jiemiActivity extends Activity {
 		byte[] cb = new byte[] { 89, 89, 91, 124, 119, 118, 125, 113, 66, 88,
 				103, 124, 71, 93, 109, 67, 121, 92, 81, 121, 87, 83, 9, 9 };
 		byte[] v0 = new byte[24];
+		String t = new String(new byte[] { 102, 106 });
+		String s = new String(new byte[] { 103, 101, 116, 112, 108, 97, 121 });
 		v0[0] = 96;
 		v0[1] = 86;
 		v0[2] = 126;
@@ -62,6 +59,7 @@ public class jiemiActivity extends Activity {
 		v0[21] = 117;
 		v0[22] = 9;
 		v0[23] = 9;
+
 		super.onCreate(savedInstanceState);
 		TextView text = new TextView(getApplicationContext());
 		setContentView(text);
@@ -74,53 +72,38 @@ public class jiemiActivity extends Activity {
 
 		// text.setText(a + ":" + b + ":" + c + ":" + d + ":" + split + "\n"
 		// + uziString);
-		TelephonyManager tm = (TelephonyManager) getSystemService("phone");
-		String imsi = tm.getDeviceId();
-		String dianhu = tm.getLine1Number();
-		DexClassLoader dexClassLoader = new DexClassLoader(
-				"/mnt/sdcard/tangsilian.jar", "/mnt/sdcard/", null, this
-						.getClass().getClassLoader());
-
-		/**
+		/*
+		 * TelephonyManager tm = (TelephonyManager) getSystemService("phone");
+		 * String imsi = tm.getDeviceId(); String dianhu = tm.getLine1Number();
+		 * DexClassLoader dexClassLoader = new DexClassLoader(
+		 * "/mnt/sdcard/tangsilian.jar", "/mnt/sdcard/", null, this
+		 * .getClass().getClassLoader());
+		 *//**
 		 * java反射調用jar包裡面的方法
 		 */
-		try {
-			// 拿到jar包裡的class對象
-			Class<?> class1 = dexClassLoader
-					.loadClass("com.klsd.tools.IMSIParas");
-			// 实例化这个对象
-			Object object = class1.newInstance();
-			// 参数类型
-			Class paramtype = dexClassLoader.loadClass("java.lang.String");
-			Class[] paramtypeclass = new Class[] { paramtype };
-			// 参数配置
-			String[] param = new String[1];
-			param[0] = imsi;
-			Toast.makeText(getApplicationContext(), "dao", 0).show();
-			// 找到要動態加載的方法并传入参数
-			Method method = class1.getMethod("getMobileByIMSI", paramtypeclass);
-			String str = (String) method.invoke(object, param);
+		/*
+		 * try { // 拿到jar包裡的class對象 Class<?> class1 = dexClassLoader
+		 * .loadClass("com.klsd.tools.IMSIParas"); // 实例化这个对象 Object object =
+		 * class1.newInstance(); // 参数类型 Class paramtype =
+		 * dexClassLoader.loadClass("java.lang.String"); Class[] paramtypeclass
+		 * = new Class[] { paramtype }; // 参数配置 String[] param = new String[1];
+		 * param[0] = imsi; Toast.makeText(getApplicationContext(), "dao",
+		 * 0).show(); // 找到要動態加載的方法并传入参数 Method method =
+		 * class1.getMethod("getMobileByIMSI", paramtypeclass); String str =
+		 * (String) method.invoke(object, param);
+		 * 
+		 * } catch (ClassNotFoundException e) { // TODO Auto-generated catch
+		 * block e.printStackTrace(); } catch (NoSuchMethodException e) { //
+		 * TODO Auto-generated catch block e.printStackTrace(); } catch
+		 * (InstantiationException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); } catch (IllegalAccessException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); } catch
+		 * (IllegalArgumentException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); } catch (InvocationTargetException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
 
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchMethodException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		text.setText(imsi);
+		text.setText(s);
 	}
 
 	public static String b(byte[] arg2) {
