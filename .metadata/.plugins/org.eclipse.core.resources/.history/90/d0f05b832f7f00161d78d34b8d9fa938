@@ -1,0 +1,12 @@
+package com.example.cydiademo;
+
+public class Mian {
+	static void initialize() {
+		MS.hookClassLoad("android.content.res.Resources",
+				new MS.ClassLoadHook() {
+					public void classLoaded(Class<?> resources) {
+						// ... code to modify the class when loaded
+					}
+				});
+	}
+}

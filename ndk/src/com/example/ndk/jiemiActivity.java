@@ -103,7 +103,12 @@ public class jiemiActivity extends Activity {
 		 * Auto-generated catch block e.printStackTrace(); }
 		 */
 
-		text.setText(s);
+		text.setText(s + getString());
+	}
+
+	private int getString() {
+		// TODO Auto-generated method stub
+		return 1;
 	}
 
 	public static String b(byte[] arg2) {

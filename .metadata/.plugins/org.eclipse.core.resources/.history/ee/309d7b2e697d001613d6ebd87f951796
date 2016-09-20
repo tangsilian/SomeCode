@@ -1,7 +1,0 @@
-package com.example.ndk;
-
-import android.app.Activity;
-
-public class jiemiActivity extends Activity {
-
-}

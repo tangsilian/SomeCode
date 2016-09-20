@@ -1,0 +1,7 @@
+package com.example.cydiademo;
+
+public class Main {
+	static void initialize() {
+		// ... code to run when extension is loaded
+	}
+}

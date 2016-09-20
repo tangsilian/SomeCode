@@ -1,7 +1,0 @@
-package matches;
-
-public class zhengze {
-	public static void main(String[] args) {
-		String string = " ";
-	}
-}

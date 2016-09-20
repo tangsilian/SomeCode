@@ -1,9 +1,0 @@
-package matches;
-
-public class zhengze {
-	public static void main(String[] args) {
-		String string = "'av'+'avc'+dfdf+'avsdv'";
-	//用正则表达式匹配输入''内的值
-	
-	}
-}
