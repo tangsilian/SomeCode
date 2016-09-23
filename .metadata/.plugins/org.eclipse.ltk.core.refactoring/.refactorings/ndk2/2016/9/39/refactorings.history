@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ndk2/jni/ndk2.cpp&apos; to &apos;tangsilian.c&apos;" description="Rename resource &apos;ndk2.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="jni/ndk2.cpp" name="tangsilian.c" stamp="1474633356013" updateReferences="true"/>
+</session>

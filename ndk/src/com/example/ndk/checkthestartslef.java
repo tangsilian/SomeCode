@@ -11,6 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class checkthestartslef extends Activity {
+	static {
+		System.loadLibrary("tangsilian");
+
+	}
+
+	public static native void start();
+
 	ListView listView;
 	String boot_permission = "android.permission.RECEIVE_BOOT_COMPLETED";
 

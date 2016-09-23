@@ -1,0 +1,14 @@
+#include <jni.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+
+#define LIB_PATH "/mnt/sdcrd//leigangwu.so"
+
+
+typedef void (*FUNC_2)(int,int,int);
+ void* (*sub_1818)();
+int main()
+{
+
+}
