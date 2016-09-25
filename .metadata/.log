@@ -4316,3 +4316,23 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 !SUBENTRY 1 org.eclipse.core.resources 4 274 2016-09-25 18:34:26.697
 !MESSAGE Resource is out of sync with the file system: '/ndk/libs/armeabi/tangsilian'.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-09-25 20:00:37.075
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Unknown javadoc format for String {key=Ljava/lang/String;} [in String.class [in java.lang [in D:\adt-bundle-windows-x86_64-20140321\sdk\platforms\android-19\android.jar]]]]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:81)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:997)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:499)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:694)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:612)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:604)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2016-09-25 20:00:37.075
+!MESSAGE Unknown javadoc format for String {key=Ljava/lang/String;} [in String.class [in java.lang [in D:\adt-bundle-windows-x86_64-20140321\sdk\platforms\android-19\android.jar]]]
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-09-25 20:06:38.485
+!MESSAGE Failed to load properties file for project 'tuokeji'
