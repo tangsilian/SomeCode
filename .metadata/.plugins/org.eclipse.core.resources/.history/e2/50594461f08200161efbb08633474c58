@@ -1,0 +1,22 @@
+package com.introspy.custom_hooks;
+
+import com.introspy.core.HookConfig;
+
+public class CustomHookList {
+
+	static public HookConfig[] getHookList() {
+		return _hookList;
+	}
+
+	static private HookConfig[] _hookList = new HookConfig[] {
+
+	new HookConfig(false, // set to true to enable the hook
+			"java.io.File", "delete", null,
+			// class, method name, arguments
+			new HookExampleImpl(),
+			// instance of the implementation extending IntroHook (here in
+			// HookExampleInpl.java)
+			"delete with an String as argument"),
+	// notes (optional)
+	};
+}

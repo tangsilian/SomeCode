@@ -1,0 +1,8 @@
+#include<stdio.h>
+int count==0;
+
+void printforever(int number){
+	char *str="hahah";
+	printf("%s,%d",str,number);
+
+}

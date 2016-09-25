@@ -1,0 +1,25 @@
+package com.introspy.custom_hooks;
+
+import com.introspy.core.HookConfig;
+
+public class CustomHookList {
+
+	static public HookConfig[] getHookList() {
+		return _hookList;
+	}
+
+	static private HookConfig[] _hookList = new HookConfig[] {
+
+	new HookConfig(true, // set to true to enable the hook
+			"java.lang.String", "equlas", new Class<?>[] { Object.class }, // class,
+																			// method
+																			// name,
+																			// arguments
+			new HookExampleImpl(),
+			// instance of the implementation extending IntroHook (here in //
+			// HookExampleInpl.java)
+			"delete with an String as argument"),
+	// notes (optional)
+	};
+
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+int count=0;
+
+void printforever(int number){
+	char *str="hahah";
+	printf("%s,%d",str,number);
+}
+int main(){
+	while(1){
+		printforever(count);
+		count++;
+		sleep(1);
+	}
+	return 0;
+}

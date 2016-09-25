@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.ndk.jiemiActivity"
+            android:name="com.example.ndk.FileSecurity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

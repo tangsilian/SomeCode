@@ -30,16 +30,13 @@
 							</builder>
 							<tool id="com.android.gcc.compiler.1595759215" name="Android GCC Compiler" superClass="com.android.gcc.compiler">
 								<option id="com.android.gcc.option.includePath.1831214601" superClass="com.android.gcc.option.includePath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;E:\BaiduYunDownload\android-ndk-r9d\platforms\android-12\arch-arm\usr\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;E:\BaiduYunDownload\android-ndk-r9d\toolchains\arm-linux-androideabi-4.8\prebuilt\windows-x86_64\lib\gcc\arm-linux-androideabi\4.8\include&quot;"/>
+									<listOptionValue builtIn="false" value="E:/BaiduYunDownload/android-ndk-r9d/platforms/android-12/arch-arm/usr/include"/>
+									<listOptionValue builtIn="false" value="E:/BaiduYunDownload/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.8/include"/>
 								</option>
 								<inputType id="com.android.gcc.inputType.493075257" superClass="com.android.gcc.inputType"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="jni"/>
-					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>

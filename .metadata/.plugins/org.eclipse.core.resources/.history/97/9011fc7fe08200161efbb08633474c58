@@ -1,0 +1,28 @@
+package com.example.testdelete;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_main);
+
+	}
+//我們這裡用mainfest聲明然後switch的方法判斷button的點擊事件click
+	public void click(View v) {
+switch (v.getId()) {
+case R.id.createfile:
+	
+	break;
+case R.id.deletefile:
+	
+	break;
+default:
+	break;
+}
+	}
+}
