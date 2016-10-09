@@ -1,4 +1,4 @@
-t,1474633373836
+t,1475132520470
 i,jni
 i,e:/baiduyundownload/android-ndk-r9d/toolchains/arm-linux-androideabi-4.6/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.6/include
 i,e:/baiduyundownload/android-ndk-r9d/toolchains/arm-linux-androideabi-4.6/prebuilt/windows-x86_64/lib/gcc/arm-linux-androideabi/4.6/include-fixed
@@ -17,7 +17,6 @@ d,__UINT_LEAST32_MAX__,4294967295U
 d,__DECIMAL_DIG__,17
 d,__SIZEOF_SIZE_T__,4
 d,__PRAGMA_REDEFINE_EXTNAME,1
-d,__THUMBEL__,1
 d,__LDBL_MIN__,2.2250738585072014e-308L
 d,__SCHAR_MAX__,127
 d,__GXX_ABI_VERSION,1002
@@ -26,7 +25,6 @@ d,__UINT64_MAX__,18446744073709551615ULL
 d,__DEC128_MIN__,1E-6143DL
 d,__UINT16_C(c),c
 d,__LDBL_MIN_10_EXP__,(-307)
-d,__thumb__,1
 d,__INT_FAST16_MAX__,2147483647
 d,__UINT_FAST8_MAX__,255
 d,__UINT_LEAST64_TYPE__,long long unsigned int
@@ -160,6 +158,7 @@ d,__INT64_TYPE__,long long int
 d,__linux__,1
 d,__GNUC_MINOR__,6
 d,__FINITE_MATH_ONLY__,0
+d,__ARM_FEATURE_DSP,1
 d,__INT_LEAST32_TYPE__,int
 d,__DBL_DECIMAL_DIG__,17
 d,__DBL_MAX__,double(1.7976931348623157e+308L)

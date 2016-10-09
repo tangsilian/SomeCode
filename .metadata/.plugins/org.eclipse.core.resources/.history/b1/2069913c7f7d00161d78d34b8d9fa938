@@ -1,9 +1,0 @@
-package decode;
-
-public class jiemi {
-	public static String[] l;
-
-	static {
-		l = new String[67];
-	}
-}

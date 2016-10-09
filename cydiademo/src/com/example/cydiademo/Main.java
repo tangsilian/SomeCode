@@ -23,7 +23,9 @@ public class Main {
 	 * string = (Integer) old .invoke(resources, args); return string + 100; }
 	 * }, old); } } }); }
 	 */
+
 	static void initialize() {
+
 		MS.hookClassLoad("android.widget.TextView", new MS.ClassLoadHook() {
 
 			public void classLoaded(Class<?> arg0) {

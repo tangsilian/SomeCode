@@ -1,7 +1,0 @@
-package com.introspy.custom_hooks;
-
-import com.introspy.core.IntroHook;
-
-public class HookStrings extends IntroHook {
-
-}

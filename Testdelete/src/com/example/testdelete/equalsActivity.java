@@ -23,7 +23,8 @@ public class equalsActivity extends Activity {
 		switch (v.getId()) {
 		case R.id.createfile:
 			if (string.equals("abc")) {
-				Toast.makeText(getApplicationContext(), "hahahhah ", 0).show();
+				Toast.makeText(getApplicationContext(), "h5456456456 ", 0)
+						.show();
 			}
 		}
 

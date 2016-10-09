@@ -16,8 +16,13 @@ obj/local/armeabi/objs/tangsilian/tangsilian.o: jni/tangsilian.c \
  E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/linux/types.h \
  E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
  E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
+ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h \
  E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/string.h \
- E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/malloc.h
+ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/malloc.h \
+ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/alloca.h \
+ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/strings.h \
+ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/memory.h \
+ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/dlfcn.h
 
 E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/stdio.h:
 
@@ -53,6 +58,16 @@ E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/ma
 
 E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
 
+E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h:
+
 E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/string.h:
 
 E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/malloc.h:
+
+E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/alloca.h:
+
+E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/strings.h:
+
+E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/memory.h:
+
+E:/BaiduYunDownload/android-ndk-r9d/platforms/android-19/arch-arm/usr/include/dlfcn.h:

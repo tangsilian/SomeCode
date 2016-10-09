@@ -1,21 +1,42 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+#include <dlfcn.h>
 
-int count = 0;
+#define LIB_PATH "/data/local/tmp/leigangwu.so"
 
-void  sevenWeapons(int number)
-{
-    char* str = "Hello,LiBieGou!";
-    printf("%s %d\n",str,number);
-}
 
+typedef void (*FUNC_2)(int,int,int);
+ void* (*sub_1818)();
 int main()
 {
-    while(1)
-    {
-        sevenWeapons(count);
-        count++;
-        sleep(1);
+    void *handle;
+
+    FUNC_2 func_2 = NULL;
+    FILE *fp;
+
+    //handle = dlopen(LIB_PATH, RTLD_LAZY);
+    if (!handle) {
+    printf("1213\n141%s\n", dlerror());
+    return -1;
     }
-    return 0;
+
+    dlerror();
+
+    func_2 = (FUNC_2)dlsym(handle, "_Z15__gnu_Unwind_18P7_JNIEnvP8_jobject");
+
+    sub_1818 = func_2 - 0xA90;
+    sub_1818();
+
+  void* __gnu_Unwind_15 = dlsym(handle,"__gnu_Unwind_15");
+
+  if((fp=fopen("/data/local/tmp/masongsong.jar","wb"))==NULL){
+    printf("\nopenFileError");
+        }
+    fwrite(__gnu_Unwind_15,0x55BFu,1,fp) ;
+    fflush(fp);
+    close(fp);
+
+
+    dlclose(handle);
+    exit(EXIT_SUCCESS);
 }

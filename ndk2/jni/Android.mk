@@ -1,8 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-
-LOCAL_MODULE    := tangsilian
+LOCAL_ARM_MODE := arm
+LOCAL_MODULE    := theone
 LOCAL_SRC_FILES := tangsilian.c
-
-include $(BUILD_EXECUTABLE)
+include $(BUILD_SHARED_LIBRARY)

@@ -1,7 +1,11 @@
-18:37:24 **** Incremental Build of configuration Default for project ndk ****
+15:02:03 **** Incremental Build of configuration Default for project ndk ****
 "E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
 Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Compile arm    : tangsilian <= tangsilian.c
+jni/tangsilian.c: In function 'main':
+jni/tangsilian.c:27:14: warning: assignment from incompatible pointer type [enabled by default]
+[armeabi] Executable     : tangsilian
 [armeabi] Install        : tangsilian => libs/armeabi/tangsilian
 
-18:37:24 Build Finished (took 517ms)
+15:02:04 Build Finished (took 866ms)
 

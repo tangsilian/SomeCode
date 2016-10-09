@@ -1,2 +1,3 @@
 /com
-/android
+/.gitignore
+/com_example_ndk2_MainActivity.h
