@@ -9,6 +9,9 @@ public class MainActivity extends Activity {
 	static {
 		System.loadLibrary("theone");
 	}
+
+	private native String beifumei();
+
 	TextView text1;
 
 	@Override
@@ -18,7 +21,5 @@ public class MainActivity extends Activity {
 		text1 = (TextView) findViewById(R.id.text);
 		text1.setText(beifumei());
 	}
-
-	private native String beifumei();
 
 }

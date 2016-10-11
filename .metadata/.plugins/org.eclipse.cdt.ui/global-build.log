@@ -1,10 +1,15 @@
-11:42:25 **** Incremental Build of configuration Default for project ndk2 ****
+14:23:52 **** Clean-only build of configuration Default for project ndk3 ****
+"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" clean 
+[armeabi] Clean          : stdc++ [armeabi]
+[armeabi] Clean          : tangsilian [armeabi]
+
+14:23:53 Build Finished (took 937ms)
+
+14:26:56 **** Build of configuration Default for project tuokeji ****
 "E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
-Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 16 in ./AndroidManifest.xml    
-[armeabi] Install        : libtheone.so => libs/armeabi/libtheone.so
-11:42:44 **** Incremental Build of configuration Default for project ndk2 ****
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
+11:36:48 **** Build of configuration Default for project tuokeji ****
 "E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
-[armeabi] Install        : libtheone.so => libs/armeabi/libtheone.so
-11:42:54 **** Incremental Build of configuration Default for project ndk2 ****
-"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
-[armeabi] Install        : libtheone.so => libs/armeabi/libtheone.so
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so

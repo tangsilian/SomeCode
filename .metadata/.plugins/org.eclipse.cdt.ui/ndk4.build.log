@@ -1,0 +1,7 @@
+14:14:48 **** Clean-only build of configuration Default for project ndk4 ****
+"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" clean 
+Android NDK: Your APP_BUILD_SCRIPT points to an unknown file: ./jni/Android.mk    
+E:/BaiduYunDownload/android-ndk-r9d/build/core/add-application.mk:187: *** Android NDK: Aborting...    .  Stop.
+
+14:14:48 Build Finished (took 225ms)
+
