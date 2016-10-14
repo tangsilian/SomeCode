@@ -13,3 +13,19 @@ Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersi
 "E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
 Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
 [armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
+11:01:08 **** Build of configuration Default for project tuokeji ****
+"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
+20:17:03 **** Build of configuration Default for project tuokeji ****
+"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
+11:43:22 **** Build of configuration Default for project tuokeji ****
+"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
+11:57:06 **** Build of configuration Default for project tuokeji ****
+"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
+[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
