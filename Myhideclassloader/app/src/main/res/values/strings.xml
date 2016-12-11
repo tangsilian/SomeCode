@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Myhideclassloader</string>
+    <string name="description">myservice</string>
+    <string name="label">myservice</string>
+    <string name="auto_service_des">静默安装</string>
+    <string name="auto_service_des2">强红包服务</string>
+    <string name="name">qq红包</string>
+</resources>
