@@ -1,6 +1,0 @@
-11:42:54 **** Incremental Build of configuration Default for project ndk2 ****
-"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
-[armeabi] Install        : libtheone.so => libs/armeabi/libtheone.so
-
-11:42:55 Build Finished (took 524ms)
-

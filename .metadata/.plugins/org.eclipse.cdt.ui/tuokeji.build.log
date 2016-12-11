@@ -1,7 +1,0 @@
-11:57:06 **** Build of configuration Default for project tuokeji ****
-"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" all 
-Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 12 in ./AndroidManifest.xml    
-[armeabi] Install        : libDumpDex.cy.so => libs/armeabi/libDumpDex.cy.so
-
-11:57:07 Build Finished (took 784ms)
-

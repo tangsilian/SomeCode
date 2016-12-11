@@ -1,7 +1,0 @@
-14:23:52 **** Clean-only build of configuration Default for project ndk3 ****
-"E:\\BaiduYunDownload\\android-ndk-r9d\\ndk-build.cmd" clean 
-[armeabi] Clean          : stdc++ [armeabi]
-[armeabi] Clean          : tangsilian [armeabi]
-
-14:23:53 Build Finished (took 937ms)
-
