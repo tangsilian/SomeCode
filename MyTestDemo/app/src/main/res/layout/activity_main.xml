@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dip"
+        android:gravity="center"
+        android:text="Demo演示" />
+    <Button
+        android:id="@+id/send_static"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送自定义静态注册广播" />
+    <Button
+        android:id="@+id/send_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送自定义静态注册广播" />
+    <Button
+        android:id="@+id/jump_to_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到其他Activity" />
+    <Button
+        android:id="@+id/jump_to_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到数据库Activity" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="start"
+        android:text="开启服务"
+        android:textSize="30sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="invoke"
+        android:text="调用服务的方法"
+        android:textSize="30sp" />
+</LinearLayout>
