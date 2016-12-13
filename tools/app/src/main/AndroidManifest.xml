@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tools"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- permision -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- application -->
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:name="com.example.tools.utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Activity类 -->
+        <activity
+            android:name=".GradviewActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BroadcastActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ContactActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ListViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".WechatActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".hajacklist"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".AppinfoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".BootstartReciverActivity"
+            android:label="@string/app_name" >
+        </activity>
+                <activity
+            android:name=".OtherhajackActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- service类 -->
+        <service
+            android:name=".services.InspectWechatFriendService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/inspect_wechat_friend" />
+        </service>
+        <service
+            android:name=".services.hijackservice"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name" >
+        </service>
+        <service
+            android:name=".services.HostMonitor"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name" >
+        </service>
+
+        <!-- recevier类 -->
+        <receiver android:name="com.example.tools.broadcastreciver.Myreceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.mybroadcast" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.tools.broadcastreciver.PhoneStatReceiver" >
+            <!-- 手机系统引导完成 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

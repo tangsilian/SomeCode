@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\settings.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\calendar.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\calendar.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\clock.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\clock.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\message_right.9.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\message_right.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\weather.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\weather.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\games_control.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\games_control.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\messenger.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\messenger.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ringtone.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\ringtone.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\address_book.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\address_book.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\message_left.9.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\message_left.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\youtube.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\youtube.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\world.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\world.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\speech_balloon.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\speech_balloon.png"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\camera.png",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\drawable-hdpi\\camera.png"
+    }
+]

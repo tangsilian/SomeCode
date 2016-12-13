@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_set.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\activity_set.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\webviewlayout.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\webviewlayout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\broadcast.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\broadcast.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chat.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\app.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hajack.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\hajack.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listviewtest.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\listviewtest.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\browser.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\browser.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_phonenum_list.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\item_phonenum_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_item.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\app_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chat_item.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\chat_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hajack_main.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\hajack_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\title.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\title.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_main.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\contact.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\contact_item.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\contact_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\build\\intermediates\\res\\merged\\debug\\layout\\gradview.xml",
+        "source": "C:\\Users\\Jay-Tang\\StudioProjects\\tools\\app\\src\\main\\res\\layout\\gradview.xml"
+    }
+]

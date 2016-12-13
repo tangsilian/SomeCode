@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_b8d6b474f0c4698f0f33ab5c5d00c0d3caaafc85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\android+sdt+adt\adt-bundle-windows-x86_64-20140321\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_78acf5b1aa3ac94b4d378e5916b14a7f7b4c1765.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="6faa1923233ab0658fdf840689430e4fbe07a1b3">
+        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\instant-run_502703ca06d0ca5f47f3a090a19f66475268b61f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_e9bb5d32ad748c10166ade2fc3d4f5461ae2ea5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="ea3bccaa6ecc102571c1c5517a2ca2bb81de87be">
+        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_91a917223a06cbcd3beeccf52502a2c497338f63.jar" />
+    </item>
+
+</items>

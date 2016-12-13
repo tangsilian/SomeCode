@@ -1,0 +1,223 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:2:1-128:12
+	package
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:3:5-32
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.CALL_PHONE
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:9:5-69
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:9:22-66
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:10:22-72
+uses-permission#android.permission.READ_CONTACTS
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:11:5-72
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:11:22-69
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:15:5-84
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:15:22-81
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:17:22-78
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:18:5-78
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:18:22-75
+uses-permission#android.permission.GET_TASKS
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:19:5-67
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:19:22-65
+uses-sdk
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:21:5-23:41
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:23:9-38
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:22:9-35
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml
+application
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:25:5-126:19
+MERGED from [com.android.support:support-v4:22.2.1] C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:29:9-41
+	android:allowBackup
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:27:9-35
+	android:icon
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:28:9-45
+	android:theme
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:30:9-40
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:26:9-61
+activity#com.example.tools.GradviewActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:33:9-41:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:35:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:34:13-45
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:36:13-40:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:39:17-77
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:39:27-74
+activity#com.example.tools.BroadcastActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:42:9-45:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:44:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:43:13-46
+activity#com.example.tools.ContactActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:46:9-49:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:48:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:47:13-44
+activity#com.example.tools.ListViewActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:50:9-53:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:52:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:51:13-45
+activity#com.example.tools.MainActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:54:9-58:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:57:13-45
+	android:excludeFromRecents
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:56:13-46
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:55:13-41
+activity#com.example.tools.WebViewActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:59:9-62:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:61:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:60:13-44
+activity#com.example.tools.WechatActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:63:9-66:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:65:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:64:13-43
+activity#com.example.tools.hajacklist
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:67:9-70:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:69:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:68:13-39
+activity#com.example.tools.AppinfoActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:71:9-74:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:73:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:72:13-44
+activity#com.example.tools.BootstartReciverActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:75:9-78:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:77:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:76:13-53
+activity#com.example.tools.OtherhajackActivity
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:79:17-82:20
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:81:13-45
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:80:13-48
+service#com.example.tools.services.InspectWechatFriendService
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:85:9-98:19
+	android:enabled
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:87:13-35
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:89:13-45
+	android:exported
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:88:13-36
+	android:permission
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:90:13-79
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:86:13-64
+intent-filter#android.accessibilityservice.AccessibilityService
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:91:13-93:29
+action#android.accessibilityservice.AccessibilityService
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:92:17-92
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:92:25-89
+meta-data#android.accessibilityservice
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:95:13-97:65
+	android:resource
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:97:17-62
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:96:17-60
+service#com.example.tools.services.hijackservice
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:99:9-104:19
+	android:enabled
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:101:13-35
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:103:13-45
+	android:exported
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:102:13-36
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:100:13-51
+service#com.example.tools.services.HostMonitor
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:105:9-110:19
+	android:enabled
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:107:13-35
+	android:label
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:109:13-45
+	android:exported
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:108:13-36
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:106:13-49
+receiver#com.example.tools.broadcastreciver.Myreceiver
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:113:9-119:20
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:113:19-79
+intent-filter#android.intent.action.mybroadcast+android.intent.category.DEFAULT
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:114:13-118:29
+action#android.intent.action.mybroadcast
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:115:17-76
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:115:25-73
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:117:17-76
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:117:27-73
+receiver#com.example.tools.broadcastreciver.PhoneStatReceiver
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:120:9-125:20
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:120:19-86
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:122:13-124:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:123:17-79
+	android:name
+		ADDED from C:\Users\Jay-Tang\StudioProjects\tools\app\src\main\AndroidManifest.xml:123:25-76
