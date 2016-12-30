@@ -64,7 +64,7 @@ public class Main {
 
 							Log.d("ggz", "string is----->" + bb);
 
-							bb = "Ë§¸çÌÆË¼Á®";
+							bb = "å¸…å“¥å”æ€å»‰";
 
 							Log.d("ggz", "now string is --->" + bb);
 
