@@ -124,7 +124,7 @@ public class QHBAccessibilityService extends AccessibilityService {
     /**
      * 处理通知栏信息
      *
-     * 如果是微信红包的提示信息,则模拟点击
+     * 如果是红包的提示信息,则模拟点击
      *
      * @param event
      */
