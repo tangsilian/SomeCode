@@ -12,7 +12,8 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import java.util.List;
 
 /**
- * Created by tangsilian on 2016-12-10.
+ *利用辅助服务抢qq红包  原理：监听红包通知--》模拟点击---》寻找节点+红包队列---》点击“开红包”--》退出
+ *Created by tangsilian on 2016-12-10.
  */
 
 public class QHBAccessibilityService extends AccessibilityService {
