@@ -5,32 +5,32 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="383821378513013"
-    token="486249858788813119"
+    timestamp="3634893166700"
+    token="1019343625700696213"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="2778" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2519" />
+        duration="0" />
     <task
         name="verifier"
-        duration="288" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Jay-Tang\StudioProjects\tools\app\build\outputs\apk\app-debug.apk"
+        location="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="383821378513013"
+        timestamp="3634893166700"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Jay-Tang\StudioProjects\tools\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

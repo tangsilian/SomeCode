@@ -3,48 +3,48 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.0"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_b8d6b474f0c4698f0f33ab5c5d00c0d3caaafc85.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="F:\android+sdt+adt\adt-bundle-windows-x86_64-20140321\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jar="C:\Users\tangsilian\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_78acf5b1aa3ac94b4d378e5916b14a7f7b4c1765.jar" />
+        <dex dex="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_197fe0afa35eeaa358986a891556cacfd5a3cbdd.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="6faa1923233ab0658fdf840689430e4fbe07a1b3">
-        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\instant-run_502703ca06d0ca5f47f3a090a19f66475268b61f.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_9cbce2e35e78a7482c427e12d0d9d4517fc7a7c4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jar="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_e9bb5d32ad748c10166ade2fc3d4f5461ae2ea5b.jar" />
+        <dex dex="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_550f145f61ed519d613d28e34018f9d4cab1ab3a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.0"
-        sha1="ea3bccaa6ecc102571c1c5517a2ca2bb81de87be">
-        <dex dex="C:\Users\Jay-Tang\StudioProjects\tools\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_91a917223a06cbcd3beeccf52502a2c497338f63.jar" />
+        sha1="84e6247d0277a5dea4817f3cf79824828b75f78d">
+        <dex dex="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\pre-dexed\debug\instant-run_5789657bef43956a03fdebbd7fbd241fd4ef65fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="1b95a5311ef9f18974f795c1707a912c0a197c35">
+        <dex dex="C:\Users\tangsilian\Desktop\darilyworkcode\tools\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_951d0fa613edbfdf85bbbd6440a70ae5bcd71b37.jar" />
     </item>
 
 </items>

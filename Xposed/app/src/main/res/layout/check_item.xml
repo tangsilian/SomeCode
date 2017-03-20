@@ -1,0 +1,4 @@
+<RelativeLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:id="@id/item_tv" android:layout_height="40.0dip" android:layout_width="wrap_content" android:textSize="12.0sp" />
+    <CheckBox android:button="@null" android:clickable="false" android:drawableLeft="@drawable/btn_check_selector" android:focusable="false" android:focusableInTouchMode="false" android:id="@id/item_cb" android:layout_alignParentRight="true" android:layout_height="wrap_content" android:layout_width="wrap_content" />
+</RelativeLayout>
