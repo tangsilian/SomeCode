@@ -366,12 +366,12 @@ jstring
 Java_com_tangsilian_checkthesandbox_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
-    int i = check();//只要i大于一就命中了特性
-    LOGE("the int i is %d",i);
-    verifySign(env);
-    checkAndroid();
+    //int i = check();//只要i大于一就命中了特性
+    //LOGE("the int i is %d",i);
+    //verifySign(env);
+    //checkAndroid();
     //getDeviceID(env);
-    if (i == 0) {
+    /*if (i == 0) {
         char *hello = "this is a phone";
         LOGE("%s", hello);
         return env->NewStringUTF(hello);
@@ -379,7 +379,7 @@ Java_com_tangsilian_checkthesandbox_MainActivity_stringFromJNI(
         char *hello2 = "this is a emulator";
         LOGE("%s", hello2);
         return env->NewStringUTF(hello2);
-    }
+    }*/
 }
 }
 
